@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSI Mineing Resources - E-Waste Recycling</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#fbbf24',
+                        accent: '#374151'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary text-white">
+  <custom-navbar></custom-navbar>
+
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Inter', sans-serif;
+      }
+      nav {
+          background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+      }
+      .nav-link {
+          transition: all 0.3s ease;
+      }
+      .nav-link:hover {
+          color: #d4af37 !important;
+      }
+      .mobile-menu {
+          transition: all 0.3s ease;
+      }
+  </style>
+  <nav class="fixed w-full z-50 bg-primary shadow-lg">
+      <div class="container mx-auto px-4">
+          <div class="flex justify-between items-center py-4">
+              <a href="index.html" class="flex items-center space-x-2">
+              <i data-feather="award" class="text-secondary"></i>
+              <span class="text-white text-xl font-bold">OSI Mineing</span>
+              </a>
+              
+              <!-- Desktop Menu -->
+              <div class="hidden md:flex items-center space-x-8">
+                  <a href="index.html" class="nav-link text-gray-300 hover:text-white">Home</a>
+                  <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>
+                  <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">E-Waste Recycling</a>
+                  <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
+                  <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
+                  <a href="contact.html" class="nav-link text-gray-300 hover:text-white">Contact</a>
+              </div>
+              
+              <!-- Mobile Menu Button -->
+              <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                  <i data-feather="menu"></i>
+              </button>
+          </div>
+          
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4">
+              <div class="flex flex-col space-y-4 px-4">
+                  <a href="index.html" class="nav-link text-gray-300 hover:text-white">Home</a>
+                  <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>
+                  <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">E-Waste Recycling</a>
+                  <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
+                  <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
+                  <a href="contact.html" class="nav-link text-gray-300 hover:text-white">Contact</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+
+    
+    <!-- Header -->
+    <section class="pt-32 pb-20 px-4 bg-gradient-to-br from-primary to-accent">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">E-Waste Recycling Solutions</h1>
+            <p class="text-xl text-gray-300">Transforming electronic waste into valuable resources through innovative recycling processes</p>
+        </div>
+    </section>
+
+    <!-- E-Waste Explanation -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-accent rounded-xl p-8 shadow-2xl">
+                <h2 class="text-3xl font-bold mb-6 text-secondary">What is E-Waste?</h2>
+            <p class="text-lg text-gray-300 mb-6">
+                Electronic waste, or e-waste, refers to discarded electrical or electronic devices. With the rapid advancement of technology, e-waste has become one of the fastest-growing waste streams globally, containing both valuable materials and hazardous substances.
+            </p>
+            <p class="text-lg text-gray-300">
+                At OSI Mineing Resources, we've developed cutting-edge processes to safely extract precious metals like gold, silver, and copper from e-waste, reducing environmental impact while recovering valuable resources.
+            </p>
+        </div>
+    </section>
+
+    <!-- Process Steps -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">Our 4-Step Recycling Process</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center group">
+                    <div class="bg-secondary text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-all duration-300">
+                        <span class="text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Collection</h3>
+                    <p class="text-gray-300">Strategic collection points and partnerships ensure efficient e-waste gathering from various sources.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center group">
+                    <div class="bg-secondary text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-all duration-300">
+                        <span class="text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Sorting</h3>
+                    <p class="text-gray-300">Advanced sorting technologies separate materials by type and composition for optimal processing.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center group">
+                    <div class="bg-secondary text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-all duration-300">
+                        <span class="text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Extraction</h3>
+                    <p class="text-gray-300">Specialized extraction processes recover precious metals and valuable components from electronic devices.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center group">
+                    <div class="bg-secondary text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-all duration-300">
+                        <span class="text-2xl font-bold">4</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Refining</h3>
+                    <p class="text-gray-300">High-purity refining techniques transform recovered materials into market-ready products and resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environmental Impact -->
+    <section class="py-16 px-4 bg-accent">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Environmental Impact</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Our e-waste recycling processes prevent hazardous materials from entering landfills while recovering valuable resources, contributing to a circular economy and reducing the need for new mining operations.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-primary rounded-lg p-6">
+                    <div class="text-secondary mb-4">
+                        <i data-feather="tool" class="w-8 h-8 mx-auto"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Reduced Mining</h3>
+                    <p class="text-gray-300">Less need for new mining operations through material recovery</p>
+                </div>
+                <div class="bg-primary rounded-lg p-6">
+                    <div class="text-secondary mb-4">
+                        <i data-feather="droplet" class="w-8 h-8 mx-auto"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Water Protection</h3>
+                    <p class="text-gray-300">Preventing hazardous substances from contaminating water sources</p>
+                </div>
+                <div class="bg-primary rounded-lg p-6">
+                    <div class="text-secondary mb-4">
+                        <i data-feather="wind" class="w-8 h-8 mx-auto"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Carbon Reduction</h3>
+                    <p class="text-gray-300">Lower carbon footprint compared to traditional mining methods</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-12">
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+          
+          <!-- Brand / About -->
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-secondary">OSI Mining & Resources</h3>
+            <p class="text-gray-300 mb-6">
+              Pioneering sustainable mining and responsible resource management for a better future.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="footer-link text-gray-300 hover:text-white transition-colors">
+                <i data-feather="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="footer-link text-gray-300 hover:text-white transition-colors">
+                <i data-feather="twitter" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="footer-link text-gray-300 hover:text-white transition-colors">
+                <i data-feather="linkedin" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-secondary">Quick Links</h4>
+            <ul class="flex flex-col space-y-2">
+              <li><a href="index.html" class="footer-link text-gray-300 hover:text-white transition-colors">Home</a></li>
+              <li><a href="technology.html" class="footer-link text-gray-300 hover:text-white transition-colors">Technology</a></li>
+              <li><a href="e-waste.html" class="footer-link text-gray-300 hover:text-white transition-colors">E-Waste Recycling</a></li>
+              <li><a href="gold-trading.html" class="footer-link text-gray-300 hover:text-white transition-colors">Gold & Trading</a></li>
+            </ul>
+          </div>
+          
+          <!-- Operations -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-secondary">Operations</h4>
+            <ul class="flex flex-col space-y-2">
+              <li><a href="#" class="footer-link text-gray-300 hover:text-white transition-colors">Our Mines</a></li>
+              <li><a href="investors.html" class="footer-link text-gray-300 hover:text-white transition-colors">Investors</a></li>
+              <li><a href="careers.html" class="footer-link text-gray-300 hover:text-white transition-colors">Careers***</a></li>
+            </ul>
+          </div>
+          
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-secondary">Contact Info</h4>
+            <div class="space-y-3 text-gray-300">
+              <p class="flex items-center space-x-2">
+                <i data-feather="map-pin"></i>
+                <span>123 Mining District, Resource City, RC 12345</span>
+              </p>
+              <p class="flex items-center space-x-2">
+                <i data-feather="phone"></i>
+                <span>+1 (555) 123-4567</span>
+              </p>
+              <p class="flex items-center space-x-2">
+                <i data-feather="mail"></i>
+                <span>info@goldenore.com</span>
+              </p>
+            </div>
+          </div>
+    
+        </div>
+    
+        <!-- Bottom copyright -->
+        <div class="border-t border-gray-600 mt-10 pt-6 text-center text-gray-400 text-sm">
+          <p>&copy; 2024 OSI Mining Resources. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

@@ -13,17 +13,20 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#0f172a',
+                        primary: '#000000',
                         secondary: '#fbbf24',
-                        accent: '#374151'
-                    }
+                        accent: '#01122A'
+                    },
+                    backgroundImage: {
+                      'black-red-white': 'linear-gradient(to right, black, #ff0000, white)',
+      }
                 }
             }
         }
     </script>
 </head>
 <body class="bg-primary text-white">
-    <custom-navbar></custom-navbar>
+
 
               <style>
                   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -34,7 +37,7 @@
                       font-family: 'Inter', sans-serif;
                   }
                   nav {
-                      background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+                      background: black;
                   }
                   .nav-link {
                       transition: all 0.3s ease;
@@ -53,17 +56,16 @@
                       <div class="flex justify-between items-center py-4">
                           <a href="index.html" class="flex items-center space-x-2">
                           <i data-feather="award" class="text-secondary"></i>
-                          <span class="text-white text-xl font-bold">OSI Mining</span>
+                          <span class="text-white text-xl font-bold">OSI Mining & Resources</span>
                           </a>
                           
                           <!-- Desktop Menu -->
                           <div class="hidden md:flex items-center space-x-8">
-                              <a href="index.html" class="nav-link text-gray-300 hover:text-white">Home</a>
-                              <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>
-                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">E-Waste Recycling</a>
-                              <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
+                              <a href="index.html" class="nav-link text-gray-300 hover:text-white">About Us</a>                              
+                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">Oporations</a>
+                              <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>                              
                               <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
-                              <a href="contact.html" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                              <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
                           </div>
                           
                           <!-- Mobile Menu Button -->
@@ -75,12 +77,11 @@
                       <!-- Mobile Menu -->
                       <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4 pb-8 mx-2 rounded-b-2xl shadow-xl border-t-2 border-gray-700">
                           <div class="flex flex-col space-y-4 px-4">
-                              <a href="index.html" class="nav-link text-gray-300 hover:text-white">Home</a>
-                              <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>
-                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">E-Waste Recycling</a>
-                              <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
+                              <a href="index.html" class="nav-link text-gray-300 hover:text-white">About Us</a>
+                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">oporations</a>
+                              <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>                              
                               <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
-                              <a href="contact.html" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                              <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
                           </div>
                       </div>
                   </div>
@@ -94,7 +95,7 @@
       <div class="relative z-10 max-w-4xl mx-auto text-center md:text-left px-6 pb-52 md:pb-0">
         <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Shaping the Future of Mining & Sustainable Trade</h1>
         <p class="text-lg md:text-xl text-gray-300 mb-6">Innovative extraction, responsible practices, global trade.</p>
-        <a href="#mines" class="inline-block bg-secondary text-primary px-6 py-3 rounded-lg font-semibold text-base hover:bg-yellow-300 transition transform hover:scale-105">Explore Our Mines</a>
+        <a href="#mines" class="inline-block bg-black-red-white text-gray-200 px-6 py-3 rounded-lg font-semibold text-base hover:bg-yellow-300 transition transform hover:scale-105">Explore Our Mines</a>
       </div>
       <!-- Decorative diagonal overlap -->
       <svg class="absolute bottom-0 left-0 right-0 translate-y-1" viewBox="0 0 100 20" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polygon fill="rgba(0,0,0,0.55)" points="0,20 100,0 100,20"/></svg>
@@ -225,7 +226,7 @@
       font-family: 'Inter', sans-serif;
   }
   footer {
-      background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+      background: black;
   }
   .footer-link {
       transition: all 0.3s ease;
@@ -261,7 +262,7 @@
       <div>
         <h4 class="text-lg font-semibold mb-4 text-secondary">Quick Links</h4>
         <ul class="flex flex-col space-y-2">
-          <li><a href="index.html" class="footer-link text-gray-300 hover:text-white transition-colors">Home</a></li>
+          <li><a href="index.html" class="footer-link text-gray-300 hover:text-white transition-colors">About</a></li>
           <li><a href="technology.html" class="footer-link text-gray-300 hover:text-white transition-colors">Technology</a></li>
           <li><a href="e-waste.html" class="footer-link text-gray-300 hover:text-white transition-colors">E-Waste Recycling</a></li>
           <li><a href="gold-trading.html" class="footer-link text-gray-300 hover:text-white transition-colors">Gold & Trading</a></li>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSI Mineing Resources - Gold & Trading</title>
+    <title>OSI Mining & Resources - Home</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -13,77 +13,79 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#0f172a',
+                        primary: '#000000',
                         secondary: '#fbbf24',
                         accent: '#374151'
-                    }
+                    },
+                    backgroundImage: {
+                      'black-red-white': 'linear-gradient(to right, black, #ff0000, white)',
+      }
                 }
             }
         }
     </script>
 </head>
 <body class="bg-primary text-white">
-  <custom-navbar></custom-navbar>
 
-  <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-      * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Inter', sans-serif;
-      }
-      nav {
-          background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-      }
-      .nav-link {
-          transition: all 0.3s ease;
-      }
-      .nav-link:hover {
-          color: #d4af37 !important;
-      }
-      .mobile-menu {
-          transition: all 0.3s ease;
-      }
-  </style>
-  <nav class="fixed w-full z-50 bg-primary shadow-lg">
-      <div class="container mx-auto px-4">
-          <div class="flex justify-between items-center py-4">
-              <a href="index.html" class="flex items-center space-x-2">
-              <i data-feather="award" class="text-secondary"></i>
-              <span class="text-white text-xl font-bold">OSI Mineing</span>
-              </a>
-              
-              <!-- Desktop Menu -->
-              <div class="hidden md:flex items-center space-x-8">
-                  <a href="index.html" class="nav-link text-gray-300 hover:text-white">Home</a>
-                  <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>
-                  <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">E-Waste Recycling</a>
-                  <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
-                  <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
-                  <a href="contact.html" class="nav-link text-gray-300 hover:text-white">Contact</a>
-              </div>
-              
-              <!-- Mobile Menu Button -->
-              <button class="md:hidden text-white" onclick="toggleMobileMenu()">
-                  <i data-feather="menu"></i>
-              </button>
-          </div>
-          
-          <!-- Mobile Menu -->
-          <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4">
-              <div class="flex flex-col space-y-4 px-4">
-                  <a href="index.html" class="nav-link text-gray-300 hover:text-white">Home</a>
-                  <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>
-                  <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">E-Waste Recycling</a>
-                  <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
-                  <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
-                  <a href="contact.html" class="nav-link text-gray-300 hover:text-white">Contact</a>
-              </div>
-          </div>
-      </div>
-  </nav>
 
+              <style>
+                  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+                  * {
+                      margin: 0;
+                      padding: 0;
+                      box-sizing: border-box;
+                      font-family: 'Inter', sans-serif;
+                  }
+                  nav {
+                      background: black;
+                  }
+                  .nav-link {
+                      transition: all 0.3s ease;
+                  }
+                  .nav-link:hover {
+                      color: #d4af37 !important;
+                  }
+                  .mobile-menu {
+                      transition: all 0.3s ease;
+                  }
+              </style>
+            
+            
+            <nav class="fixed w-full z-50 bg-primary shadow-lg">
+                  <div class="container mx-auto px-4">
+                      <div class="flex justify-between items-center py-4">
+                          <a href="index.html" class="flex items-center space-x-2">
+                          <i data-feather="award" class="text-secondary"></i>
+                          <span class="text-white text-xl font-bold">OSI Mining & Resources</span>
+                          </a>
+                          
+                          <!-- Desktop Menu -->
+                          <div class="hidden md:flex items-center space-x-8">
+                              <a href="index.html" class="nav-link text-gray-300 hover:text-white">About Us</a>                              
+                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">Oporations</a>
+                              <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>                              
+                              <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
+                              <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
+                          </div>
+                          
+                          <!-- Mobile Menu Button -->
+                          <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                              <i data-feather="menu"></i>
+                          </button>
+                      </div>
+                      
+                      <!-- Mobile Menu -->
+                      <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4 pb-8 mx-2 rounded-b-2xl shadow-xl border-t-2 border-gray-700">
+                          <div class="flex flex-col space-y-4 px-4">
+                              <a href="index.html" class="nav-link text-gray-300 hover:text-white">About Us</a>
+                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">oporations</a>
+                              <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>                              
+                              <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
+                              <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
+                          </div>
+                      </div>
+                  </div>
+              </nav>
     
     <!-- Header -->
     <section class="pt-32 pb-20 px-4 bg-gradient-to-br from-primary to-accent">

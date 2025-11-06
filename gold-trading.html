@@ -15,7 +15,7 @@
                     colors: {
                         primary: '#000000',
                         secondary: '#fbbf24',
-                        accent: '#374151'
+                        accent: '#01122A'
                     },
                     backgroundImage: {
                       'black-red-white': 'linear-gradient(to right, black, #ff0000, white)',
@@ -62,8 +62,7 @@
                           <!-- Desktop Menu -->
                           <div class="hidden md:flex items-center space-x-8">
                               <a href="index.html" class="nav-link text-gray-300 hover:text-white">About Us</a>                              
-                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">Oporations</a>
-                              <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>                              
+                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">Oporations</a>                          
                               <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
                               <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
                           </div>
@@ -77,10 +76,9 @@
                       <!-- Mobile Menu -->
                       <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4 pb-8 mx-2 rounded-b-2xl shadow-xl border-t-2 border-gray-700">
                           <div class="flex flex-col space-y-4 px-4">
-                              <a href="index.html" class="nav-link text-gray-300 hover:text-white">About Us</a>
-                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">oporations</a>
-                              <a href="technology.html" class="nav-link text-gray-300 hover:text-white">Technology</a>                              
+                              <a href="index.html" class="nav-link text-gray-300 hover:text-white">About Us</a>                          
                               <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
+                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">Operations</a>
                               <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
                           </div>
                       </div>
@@ -94,31 +92,72 @@
             <p class="text-xl text-gray-300">Premium quality gold products and transparent trading practices</p>
         </div>
     </section>
-
-    <!-- Our Process -->
-    <section class="py-16 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-secondary">Our Process</h2>
-            <div class="space-y-8">
-                <div class="bg-accent rounded-xl p-6 shadow-2xl">
-                    <h3 class="text-2xl font-bold mb-4">1. Extraction & Collection</h3>
-                    <p class="text-gray-300">Gold is extracted from our mines and collected from e-waste recycling processes, ensuring traceability from source to final product.</p>
-                </div>
-                <div class="bg-accent rounded-xl p-6 shadow-2xl">
-                    <h3 class="text-2xl font-bold mb-4">2. Initial Refining</h3>
-                    <p class="text-gray-300">Raw gold undergoes initial purification to remove impurities and achieve high purity levels.</p>
-                </div>
-                <div class="bg-accent rounded-xl p-6 shadow-2xl">
-                    <h3 class="text-2xl font-bold mb-4">3. Advanced Purification</h3>
-                    <p class="text-gray-300">State-of-the-art purification techniques ensure gold meets international quality standards.</p>
-                </div>
-                <div class="bg-accent rounded-xl p-6 shadow-2xl">
-                    <h3 class="text-2xl font-bold mb-4">4. Quality Assurance</h3>
-                    <p class="text-gray-300">Rigorous testing and certification processes guarantee product quality and authenticity.</p>
-                </div>
-            </div>
+    <!-- Introduction and Product Grid -->
+    <section class="pt-16 px-4">
+        <div class="max-w-4xl mx-auto mb-12 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-secondary">Our Gold Products</h2>
+            <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+                At OSI Mining & Resources, we specialize in premium gold products obtained through advanced e-waste refinement processes. Our commitment to sustainability and quality ensures that every product meets the highest standards.
+            </p>
+        </div>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
         </div>
     </section>
+
+    <!-- Types of Gold We Trade Section (Integrated with Product Cards) -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 justify-center">
+        <!-- Bullion Bars Card with Integrated Dropdown and Price -->
+        <div class="relative rounded-xl shadow-2xl flex flex-col overflow-hidden mx-auto w-full max-w-md">
+          <div class="relative w-full h-64 flex flex-col justify-end">
+            <img src="content/gold-bar.jpg" alt="Gold Bullion Bar" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative z-10 p-6 flex flex-col h-full justify-end">
+              <h3 class="text-xl font-bold mb-2 text-secondary">Gold Bullion Bar</h3>
+              <p class="text-gray-300 mb-2 flex-grow">Certified gold bullion bars, perfect for secure storage and trading.</p>
+              <div class="flex flex-col mb-2">
+                <label for="weight-select-2" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                <select id="weight-select-2" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('product2', this.value)">
+                  <option value="1g">5oz</option>
+                  <option value="5g">10oz</option>
+                  <option value="10g">20oz</option>
+                  <option value="1oz">1kilo</option>
+                </select>
+                <div class="text-secondary font-semibold text-lg mt-1" id="price-product2">$57.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Gold Coins Card with Integrated Dropdown and Price -->
+        <div class="relative rounded-xl shadow-2xl flex flex-col overflow-hidden mx-auto w-full max-w-md">
+          <div class="relative w-full h-64 flex flex-col justify-end">
+            <img src="content/gold-coin.jpg" alt="Gold Coins" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative z-10 p-6 flex flex-col h-full justify-end">
+              <h3 class="text-xl font-bold mb-2 text-secondary">24K Refined Gold</h3>
+              <p class="text-gray-300 mb-2 flex-grow">Pure 24 karat gold refined to perfection, ideal for investment and jewelry crafting.</p>
+              <div class="flex flex-col mb-2">
+                <label for="weight-select-1" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                <select id="weight-select-1" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('product1', this.value)">
+                  <option value="1g">1g</option>
+                  <option value="5g">5g</option>
+                  <option value="10g">10g</option>
+                  <option value="1oz">1oz</option>
+                </select>
+                <div class="text-secondary font-semibold text-lg mt-1" id="price-product1">$55.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="px-4 text-center">
+        <div class="max-w-4xl mx-auto mb-12">
+          <a href="#contact" class="text-3xl font-bold mb-4 text-secondary hover:underline hover:text-yellow-300 transition-all duration-300">
+            To Get Gold, Email Us Below
+          </a>
+        </div>
+      </section>
 
     <!-- Quality Standards -->
     <section class="py-16 px-4 bg-accent">
@@ -154,7 +193,7 @@
     </section>
 
     <!-- Contact Form -->
-    <section class="py-16 px-4 bg-accent">
+    <section id="contact" class="py-16 px-4 bg-accent">
         <div class="max-w-2xl mx-auto">
             <h2 class="text-3xl font-bold mb-8 text-center">Contact Our Trading Team</h2>
             <form class="space-y-6 bg-primary rounded-xl p-8 shadow-2xl">
@@ -208,21 +247,12 @@
             <h4 class="text-lg font-semibold mb-4 text-secondary">Quick Links</h4>
             <ul class="flex flex-col space-y-2">
               <li><a href="index.html" class="footer-link text-gray-300 hover:text-white transition-colors">Home</a></li>
-              <li><a href="technology.html" class="footer-link text-gray-300 hover:text-white transition-colors">Technology</a></li>
               <li><a href="e-waste.html" class="footer-link text-gray-300 hover:text-white transition-colors">E-Waste Recycling</a></li>
               <li><a href="gold-trading.html" class="footer-link text-gray-300 hover:text-white transition-colors">Gold & Trading</a></li>
             </ul>
           </div>
           
-          <!-- Operations -->
-          <div>
-            <h4 class="text-lg font-semibold mb-4 text-secondary">Operations</h4>
-            <ul class="flex flex-col space-y-2">
-              <li><a href="#" class="footer-link text-gray-300 hover:text-white transition-colors">Our Mines</a></li>
-              <li><a href="investors.html" class="footer-link text-gray-300 hover:text-white transition-colors">Investors</a></li>
-              <li><a href="careers.html" class="footer-link text-gray-300 hover:text-white transition-colors">Careers***</a></li>
-            </ul>
-          </div>
+
           
           <!-- Contact Info -->
           <div>
@@ -255,6 +285,45 @@
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
     <script src="script.js"></script>
+    <script>
+      const prices = {
+        product1: {
+          "5oz": 55.00,
+          "10g": 270.00,
+          "20g": 530.00,
+          "1kilo": 1650.00
+        },
+        product2: {
+            "5oz": 55.00,
+          "10g": 270.00,
+          "20g": 530.00,
+          "1kilo": 1650.00
+        },
+        product3: {
+          "5oz": 55.00,
+          "10g": 270.00,
+          "20g": 530.00,
+          "1kilo": 1650.00
+        }
+      };
+
+      function updatePrice(productId, weight) {
+        const priceElement = document.getElementById(`price-${productId}`);
+        if (prices[productId] && prices[productId][weight]) {
+          priceElement.textContent = `$${prices[productId][weight].toFixed(2)}`;
+        }
+      }
+
+      // Initialize default prices on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        Object.keys(prices).forEach(productId => {
+          const select = document.getElementById(`weight-select-${productId.slice(-1)}`);
+          if (select) {
+            updatePrice(productId, select.value);
+          }
+        });
+      });
+    </script>
     <script>feather.replace();</script>
 </body>
 </html>

@@ -1,5 +1,6 @@
-// Supabase client is assumed to be included in HTML via UMD script
-// const supabase = supabase.createClient(...);
+const supabaseUrl = "https://jwqruidvfgueeybhmimp.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp3cXJ1aWR2Zmd1ZWV5YmhtaW1wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2MjY1MjQsImV4cCI6MjA3ODIwMjUyNH0.IyunbSQVYaRfCnGqTCLTp4hubZNZG-xVsK3D5gun04M"; // anon key
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 if (!window.supabase) {
   alert("Supabase is not loaded. Make sure supabase.js is included before script.js");

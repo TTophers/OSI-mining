@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSI Mining & Resources - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
@@ -18,7 +18,7 @@
                         accent: '#01122A'
                     },
                     backgroundImage: {
-                      'black-red-white': 'linear-gradient(to right, black, #ff0000, white)',
+                      'black-red-white': 'linear-gradient(to right, black, #ff0000)',
       }
                 }
             }
@@ -45,45 +45,54 @@
                   .nav-link:hover {
                       color: #d4af37 !important;
                   }
+                  .metallic-gold {
+  background: linear-gradient(90deg, #d4af37 0%, #ffea70 50%, #d4af37 100%);
+  background-clip: text; /* standard fallback */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.45);
+}
                   .mobile-menu {
                       transition: all 0.3s ease;
                   }
               </style>
             
-            
             <nav class="fixed w-full z-50 bg-primary shadow-lg">
-                  <div class="container mx-auto px-4">
-                      <div class="flex justify-between items-center py-4">
-                          <a href="index.html" class="flex items-center space-x-2">
-                          <i data-feather="award" class="text-secondary"></i>
-                          <span class="text-white text-xl font-bold">OSI Mining & Resources</span>
-                          </a>
+              <div class=" container mx-auto px-4">
+                  <div class="flex justify-between items-center py-4">
+                      <a href="index.html" class="flex items-center space-x-2">
+                      <img src="content/ax.png" alt="OSI Mining Logo" class="w-8 h-8 object-contain">
+                      <span class="metallic-gold text-white text-xl font-bold">OSI Mining & Resources</span>
+                      </a>
                           
-                          <!-- Desktop Menu -->
-                          <div class="hidden md:flex items-center space-x-8">
-                              <a href="index.html" class="nav-link text-gray-300 hover:text-white">About Us</a>                              
-                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">Oporations</a>                           
-                              <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
-                              <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
-                          </div>
-                          
-                          <!-- Mobile Menu Button -->
-                          <button class="md:hidden text-white" onclick="toggleMobileMenu()">
-                              <i data-feather="menu"></i>
-                          </button>
-                      </div>
-                      
-                      <!-- Mobile Menu -->
-                      <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4 pb-8 mx-2 rounded-b-2xl shadow-xl border-t-2 border-gray-700">
-                          <div class="flex flex-col space-y-4 px-4">
-                              <a href="index.html" class="nav-link text-gray-300 hover:text-white">About Us</a>
-                              <a href="e-waste.html" class="nav-link text-gray-300 hover:text-white">oporations</a>                        
-                              <a href="investors.html" class="nav-link text-gray-300 hover:text-white">Investors</a>
-                              <a href="gold-trading.html" class="nav-link text-gray-300 hover:text-white">Gold & Trading</a>
-                          </div>
-                      </div>
-                  </div>
-              </nav>
+                        <!-- Desktop Menu -->
+                      <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link text-secondary hover:text-white">About Us</a>                              
+                        <a href="e-waste.html" class="nav-link text-secondary hover:text-white">Oporations</a>
+                        <a href="tech.html" class="nav-link text-secondary hover:text-white">Technologie</a>                             
+                        <a href="investors.html" class="nav-link text-secondary hover:text-white">Investors</a>
+                        <a href="gold-trading.html" class="nav-link text-secondary hover:text-white">Gold & Trading</a>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4 pb-8 mx-2 rounded-b-2xl shadow-xl border-t-2 border-gray-700">
+                    <div class="flex flex-col space-y-4 px-4">
+                        <a href="index.html" class="nav-link text-secondary hover:text-white">About Us</a>
+                        <a href="e-waste.html" class="nav-link text-secondary hover:text-white">oporations</a> 
+                        <a href="tech.html" class="nav-link text-secondary hover:text-white">Technologie</a>                          
+                        <a href="investors.html" class="nav-link text-secondary hover:text-white">Investors</a>
+                        <a href="gold-trading.html" class="nav-link text-secondary hover:text-white">Gold & Trading</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
 
     <!-- Hero + Mines Story Sections -->
@@ -91,8 +100,8 @@
     <section id="hero" class="relative h-[90vh] flex items-end md:items-center justify-center bg-cover bg-center" style="background-image: url('https://www.sierraclub.org/sites/default/files/sce-authors/u2196/mine%2012.jpg');">
       <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40"></div>
       <div class="relative z-10 max-w-4xl mx-auto text-center md:text-left px-6 pb-52 md:pb-0">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Shaping the Future of Mining & Sustainable Trade</h1>
-        <p class="text-lg md:text-xl text-gray-300 mb-6">Innovative extraction, responsible practices, global trade.</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Pioneering Amarica's Resource Indapendance</h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-6">Advancing U.S. leadership in critical minerals, rare earth elements, and electronic materials through innovation, sustainability, and strategic resource development.</p>
         <a href="#mines" class="inline-block bg-black-red-white text-gray-200 px-6 py-3 rounded-lg font-semibold text-base hover:bg-yellow-300 transition transform hover:scale-105">Explore Our Mines</a>
       </div>
       <!-- Decorative diagonal overlap -->
@@ -201,7 +210,7 @@
       <section class="bg-accent py-12">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-6">
           <a href="e-waste.html" class="block bg-gradient-to-r from-black/40 to-black/25 rounded-xl p-8 hover:scale-102 transform transition shadow-lg">
-            <h4 class="text-xl font-semibold text-secondary mb-2">Our </h4>
+            <h4 class="text-xl font-semibold text-secondary mb-2">Our Oporations</h4>
             <p class="text-gray-200 mb-4">Deep dive into the machines and processes that power our operations.</p>
           </a>
           <a href="investors.html" class="block bg-gradient-to-r from-black/40 to-black/25 rounded-xl p-8 hover:scale-102 transform transition shadow-lg">

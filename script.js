@@ -42,8 +42,8 @@ function handleContactForm(formSelector, tableName, selectSelector, selectColumn
 
 // Call handlers for both forms on page load
 document.addEventListener("DOMContentLoaded", () => {
-  handleContactForm("#investorForm", "investor_inquiries", "select", "interest");
-  handleContactForm("#goldContactForm", "gold_inquiries", "select", "weight");
+  handleContactForm("#investorForm", "investor_inquiries", "#interest-select", "interest");
+  handleContactForm("#goldContactForm", "gold_inquiries", "#weight-select", "weight");
 });
 
 function toggleMobileMenu() {

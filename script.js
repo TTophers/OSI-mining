@@ -1,10 +1,31 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Initialize Supabase
-  const supabaseUrl = "https://jwqruidvfgueeybhmimp.supabase.co";
-  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp3cXJ1aWR2Zmd1ZWV5YmhtaW1wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2MjY1MjQsImV4cCI6MjA3ODIwMjUyNH0.IyunbSQVYaRfCnGqTCLTp4hubZNZG-xVsK3D5gun04M"; // safe for client
-  const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+// Mobile menu toggle functionality
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const button = document.querySelector('nav button i');
+  menu.classList.toggle('hidden');
+  const isOpen = !menu.classList.contains('hidden');
+  button.dataset.feather = isOpen ? 'x' : 'menu';
+  feather.replace();
+}
 
-  // Example: attach your form handlers here
+document.addEventListener('click', (e) => {
+  const menu = document.getElementById('mobile-menu');
+  const button = document.querySelector('nav button');
+  if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !button.contains(e.target)) {
+    menu.classList.add('hidden');
+    const icon = button.querySelector('i');
+    icon.dataset.feather = 'menu';
+    feather.replace();
+  }
+});
+
+// Initialize Supabase and attach form handlers
+document.addEventListener("DOMContentLoaded", () => {
+  const supabaseUrl = "https://jwqruidvfgueeybhmimp.supabase.co";
+  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp3cXJ1aWR2Zmd1ZWV5YmhtaW1wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2MjY1MjQsImV4cCI6MjA3ODIwMjUyNH0.IyunbSQVYaRfCnGqTCLTp4hubZNZG-xVsK3D5gun04M";
+  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+  // Generic function to handle any contact form
   function handleContactForm(formSelector, tableName, selectMappings = {}) {
     const form = document.querySelector(formSelector);
     if (!form) return;
@@ -25,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (selectEl) payload[columnName] = selectEl.value;
       }
 
-      const { data, error } = await supabaseClient.from(tableName).insert([payload]);
+      const { data, error } = await supabase.from(tableName).insert([payload]);
       if (error) {
         alert("Submission failed: " + error.message);
       } else {
@@ -35,33 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Attach handlers for both forms
   handleContactForm("#investorForm", "investor_inquiries", { interest: "#interest-select" });
   handleContactForm("#goldContactForm", "gold_inquiries", { weight: "#weight-select" });
-});
-
-// Attach handlers for both forms on page load
-document.addEventListener('DOMContentLoaded', () => {
-  handleContactForm('#investorForm', 'investor_inquiries', { interest: '#interest-select' });
-  handleContactForm('#goldContactForm', 'gold_inquiries', { weight: '#weight-select' });
-});
-
-// Mobile menu toggle functionality
-function toggleMobileMenu() {
-  const menu = document.getElementById('mobile-menu');
-  const button = document.querySelector('nav button i');
-  menu.classList.toggle('hidden');
-  const isOpen = !menu.classList.contains('hidden');
-  button.dataset.feather = isOpen ? 'x' : 'menu';
-  feather.replace();
-}
-
-document.addEventListener('click', (e) => {
-  const menu = document.getElementById('mobile-menu');
-  const button = document.querySelector('nav button');
-  if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !button.contains(e.target)) {
-    menu.classList.add('hidden');
-    const icon = button.querySelector('i');
-    icon.dataset.feather = 'menu';
-    feather.replace();
-  }
 });

@@ -1,8 +1,9 @@
-import { createClient } from './node_modules/@supabase/supabase-js/dist/supabase.js';
+// Supabase client is assumed to be included in HTML via UMD script
+// const supabase = supabase.createClient(...);
 
-const supabaseUrl = "https://jwqruidvfgueeybhmimp.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp3cXJ1aWR2Zmd1ZWV5YmhtaW1wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2MjY1MjQsImV4cCI6MjA3ODIwMjUyNH0.IyunbSQVYaRfCnGqTCLTp4hubZNZG-xVsK3D5gun04M";
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+if (!window.supabase) {
+  alert("Supabase is not loaded. Make sure supabase.js is included before script.js");
+}
 
 // Generic function to handle any contact form
 function handleContactForm(formSelector, tableName, selectSelector, selectColumnName) {
@@ -12,10 +13,20 @@ function handleContactForm(formSelector, tableName, selectSelector, selectColumn
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const fullName = form.querySelector('[placeholder*="full name"]').value;
-    const email = form.querySelector('input[type="email"]').value;
-    const company = form.querySelector('[placeholder*="company"]').value;
-    const message = form.querySelector('textarea').value;
+    const fullNameEl = form.querySelector('[placeholder*="full name"]');
+    const emailEl = form.querySelector('input[type="email"]');
+    const companyEl = form.querySelector('[placeholder*="company"]');
+    const messageEl = form.querySelector('textarea');
+
+    if (!fullNameEl || !emailEl || !companyEl || !messageEl) {
+      alert("Form fields not found");
+      return;
+    }
+
+    const fullName = fullNameEl.value;
+    const email = emailEl.value;
+    const company = companyEl.value;
+    const message = messageEl.value;
 
     let selectValue = null;
     if (selectSelector) {

@@ -23,7 +23,7 @@ document.addEventListener('click', (e) => {
 document.addEventListener("DOMContentLoaded", () => {
   const supabaseUrl = "https://jwqruidvfgueeybhmimp.supabase.co";
   const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp3cXJ1aWR2Zmd1ZWV5YmhtaW1wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2MjY1MjQsImV4cCI6MjA3ODIwMjUyNH0.IyunbSQVYaRfCnGqTCLTp4hubZNZG-xVsK3D5gun04M";
-  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+  const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
   // Generic function to handle any contact form
   function handleContactForm(formSelector, tableName, selectMappings = {}) {
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (selectEl) payload[columnName] = selectEl.value;
       }
 
-      const { data, error } = await supabase.from(tableName).insert([payload]);
+      const { data, error } = await supabaseClient.from(tableName).insert([payload]);
       if (error) {
         alert("Submission failed: " + error.message);
       } else {

@@ -10,23 +10,25 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#000000',
-                        secondary: '#fbbf24',
-                        accent: '#01122A'
-                    },
-                    backgroundImage: {
-                      'black-red-white': 'linear-gradient(to right, black, #ff0000, white)',
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#000000',       // Black for backgrounds/nav/footer
+              secondary: '#fbbf24',     // Dark gold for headings, text highlights
+              accent: '#01122A',        // Dark navy/black for mobile menu, CTA backgrounds
+              bordergold: '#6d5324',    // Dark bronze/gold for borders
+            },
+            backgroundImage: {
+              'black-red-white': 'linear-gradient(to right, black, #ff0000)', 
+              'black-gold-soft': 'linear-gradient(135deg, #000000, #161309, #000000)',
+            },
+          },
+        },
       }
-                }
-            }
-        }
-    </script>
+      </script>
 </head>
-<body class="bg-primary text-white">
+<body class="bg-black-gold-soft text-white">
 
 
               <style>
@@ -96,156 +98,159 @@
               </div>
           </nav>
     
-    <!-- Header -->
-    <section class="pt-32 pb-20 px-4 bg-gradient-to-br from-primary to-accent">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Gold Refining & Trading</h1>
-            <p class="text-xl text-gray-300">Premium quality gold products and transparent trading practices</p>
-        </div>
-    </section>
-    <!-- Introduction and Product Grid -->
-    <section class="pt-16 px-4">
-        <div class="max-w-4xl mx-auto mb-12 text-center">
-            <h2 class="text-3xl font-bold mb-4 text-secondary">Our Gold Products</h2>
-            <p class="text-gray-300 text-lg max-w-3xl mx-auto">
-                At OSI Mining & Resources, we specialize in premium gold products obtained through advanced e-waste refinement processes. Our commitment to sustainability and quality ensures that every product meets the highest standards.
-            </p>
-        </div>
-        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
-        </div>
-    </section>
-
-    <!-- Types of Gold We Trade Section (Integrated with Product Cards) -->
-    <section class="py-16 px-4">
-      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 justify-center">
-        <!-- Bullion Bars Card with Integrated Dropdown and Price -->
-        <div class="relative rounded-xl shadow-2xl flex flex-col overflow-hidden mx-auto w-full max-w-md">
-          <div class="relative w-full h-64 flex flex-col justify-end">
-            <img src="content/gold-bar.jpg" alt="Gold Bullion Bar" class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-            <div class="relative z-10 p-6 flex flex-col h-full justify-end">
-              <h3 class="text-xl font-bold mb-2 text-secondary">Gold Bullion Bar</h3>
-              <p class="text-gray-300 mb-2 flex-grow">Certified gold bullion bars, perfect for secure storage and trading.</p>
-              <div class="flex flex-col mb-2">
-                <label for="weight-select-2" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
-                <select id="weight-select-2" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('product2', this.value)">
-                  <option value="1g">5oz</option>
-                  <option value="5g">10oz</option>
-                  <option value="10g">20oz</option>
-                  <option value="1oz">1kilo</option>
-                </select>
-                <div class="text-secondary font-semibold text-lg mt-1" id="price-product2">$57.00</div>
-              </div>
-            </div>
+    <!-- Unified Gradient Background Wrapper -->
+    <div class="bg-black-gold-soft text-white">
+      <!-- Header -->
+      <section class="pt-32 pb-20 px-4">
+          <div class="max-w-4xl mx-auto text-center">
+              <h1 class="text-5xl md:text-6xl font-bold mb-6">Gold Refining & Trading</h1>
+              <p class="text-xl text-gray-300">Premium quality gold products and transparent trading practices</p>
           </div>
-        </div>
-        <!-- Gold Coins Card with Integrated Dropdown and Price -->
-        <div class="relative rounded-xl shadow-2xl flex flex-col overflow-hidden mx-auto w-full max-w-md">
-          <div class="relative w-full h-64 flex flex-col justify-end">
-            <img src="content/gold-coin.jpg" alt="Gold Coins" class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-            <div class="relative z-10 p-6 flex flex-col h-full justify-end">
-              <h3 class="text-xl font-bold mb-2 text-secondary">24K Refined Gold</h3>
-              <p class="text-gray-300 mb-2 flex-grow">Pure 24 karat gold refined to perfection, ideal for investment and jewelry crafting.</p>
-              <div class="flex flex-col mb-2">
-                <label for="weight-select-1" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
-                <select id="weight-select-1" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('product1', this.value)">
-                  <option value="1g">1g</option>
-                  <option value="5g">5g</option>
-                  <option value="10g">10g</option>
-                  <option value="1oz">1oz</option>
-                </select>
-                <div class="text-secondary font-semibold text-lg mt-1" id="price-product1">$55.00</div>
-              </div>
-            </div>
+      </section>
+      <!-- Introduction and Product Grid -->
+      <section class="pt-16 px-4">
+          <div class="max-w-4xl mx-auto mb-12 text-center">
+              <h2 class="text-3xl font-bold mb-4 text-secondary">Our Gold Products</h2>
+              <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+                  At OSI Mining & Resources, we specialize in premium gold products obtained through advanced e-waste refinement processes. Our commitment to sustainability and quality ensures that every product meets the highest standards.
+              </p>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="px-4 text-center">
-        <div class="max-w-4xl mx-auto mb-12">
-          <a href="#contact" class="text-3xl font-bold mb-4 text-secondary hover:underline hover:text-yellow-300 transition-all duration-300">
-            To Get Gold, Email Us Below
-          </a>
-        </div>
+          <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
+          </div>
       </section>
 
-    <!-- Quality Standards -->
-    <section class="py-16 px-4 bg-accent">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-secondary">Quality Standards</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-primary rounded-xl p-6">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="award" class="w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">LBMA Certified</h3>
-                    <p class="text-gray-300">All our gold products meet London Bullion Market Association standards for purity and quality.</p>
+      <!-- Types of Gold We Trade Section (Integrated with Product Cards) -->
+      <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 justify-center">
+          <!-- Bullion Bars Card with Integrated Dropdown and Price -->
+          <div class="relative rounded-xl shadow-2xl flex flex-col overflow-hidden mx-auto w-full max-w-md">
+            <div class="relative w-full h-64 flex flex-col justify-end">
+              <img src="content/gold-bar.jpg" alt="Gold Bullion Bar" class="absolute inset-0 w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+              <div class="relative z-10 p-6 flex flex-col h-full justify-end">
+                <h3 class="text-xl font-bold mb-2 text-secondary">Gold Bullion Bar</h3>
+                <p class="text-gray-300 mb-2 flex-grow">Certified gold bullion bars, perfect for secure storage and trading.</p>
+                <div class="flex flex-col mb-2">
+                  <label for="weight-select-2" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                  <select id="weight-select-2" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('product2', this.value)">
+                    <option value="1g">5oz</option>
+                    <option value="5g">10oz</option>
+                    <option value="10g">20oz</option>
+                    <option value="1oz">1kilo</option>
+                  </select>
+                  <div class="text-secondary font-semibold text-lg mt-1" id="price-product2">$57.00</div>
                 </div>
-                <div class="bg-primary rounded-xl p-6">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="check-circle" class="w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Ethical Sourcing</h3>
-                    <p class="text-gray-300">Committed to responsible and transparent sourcing practices throughout our supply chain.</p>
-                </div>
+              </div>
             </div>
+          </div>
+          <!-- Gold Coins Card with Integrated Dropdown and Price -->
+          <div class="relative rounded-xl shadow-2xl flex flex-col overflow-hidden mx-auto w-full max-w-md">
+            <div class="relative w-full h-64 flex flex-col justify-end">
+              <img src="content/gold-coin.jpg" alt="Gold Coins" class="absolute inset-0 w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+              <div class="relative z-10 p-6 flex flex-col h-full justify-end">
+                <h3 class="text-xl font-bold mb-2 text-secondary">24K Refined Gold</h3>
+                <p class="text-gray-300 mb-2 flex-grow">Pure 24 karat gold refined to perfection, ideal for investment and jewelry crafting.</p>
+                <div class="flex flex-col mb-2">
+                  <label for="weight-select-1" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                  <select id="weight-select-1" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('product1', this.value)">
+                    <option value="1g">1g</option>
+                    <option value="5g">5g</option>
+                    <option value="10g">10g</option>
+                    <option value="1oz">1oz</option>
+                  </select>
+                  <div class="text-secondary font-semibold text-lg mt-1" id="price-product1">$55.00</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+      <section class="px-4 text-center">
+          <div class="max-w-4xl mx-auto mb-12">
+            <a href="#goldContactForm" class="text-3xl font-bold mb-4 text-secondary hover:underline hover:text-yellow-300 transition-all duration-300">
+              To Get Gold, Email Us Below
+            </a>
+          </div>
+        </section>
 
-    <!-- Partner With Us -->
-    <section class="py-16 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-secondary">Partner With Us</h2>
-            <p class="text-lg text-gray-300 mb-8">
-                We partner with leading financial institutions, jewelers, and industrial clients worldwide. Our commitment to quality and transparency makes us the preferred choice for gold trading partnerships.
-            </p>
+      <!-- Quality Standards -->
+      <section class="py-16 px-4">
+          <div class="max-w-4xl mx-auto">
+              <h2 class="text-3xl font-bold mb-8 text-secondary text-center">Quality Standards</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div class="bg-primary bg-opacity-80 rounded-xl p-6">
+                      <div class="text-secondary mb-4">
+                          <i data-feather="award" class="w-8 h-8"></i>
+                      </div>
+                      <h3 class="text-xl font-bold mb-3">LBMA Certified</h3>
+                      <p class="text-gray-300">All our gold products meet London Bullion Market Association standards for purity and quality.</p>
+                  </div>
+                  <div class="bg-primary bg-opacity-80 rounded-xl p-6">
+                      <div class="text-secondary mb-4">
+                          <i data-feather="check-circle" class="w-8 h-8"></i>
+                      </div>
+                      <h3 class="text-xl font-bold mb-3">Ethical Sourcing</h3>
+                      <p class="text-gray-300">Committed to responsible and transparent sourcing practices throughout our supply chain.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Partner With Us -->
+      <section class="py-16 px-4">
+          <div class="max-w-4xl mx-auto">
+              <h2 class="text-3xl font-bold mb-8 text-secondary text-center">Partner With Us</h2>
+              <p class="text-lg text-gray-300 mb-8">
+                  We partner with leading financial institutions, jewelers, and industrial clients worldwide. Our commitment to quality and transparency makes us the preferred choice for gold trading partnerships.
+              </p>
+          </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section id="gold-contact" class="py-16 px-4">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-center">Contact Our Trading Team</h2>
+          <form id="goldContactForm" class="space-y-6 bg-black/50 border-4 border-bordergold rounded-xl p-8 shadow-2xl">
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+              <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Enter your full name">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+              <input type="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Enter your email">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Company</label>
+              <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Enter your company name">
+            </div>
+            
+            <!-- Gold Weight Select -->
+            <div>
+              <label  class="block text-sm font-medium text-gray-300 mb-2">Select Gold Weight</label>
+              <select id="weight-select" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent">
+                <option value="1g">1g</option>
+                <option value="5g">5g</option>
+                <option value="10g">10g</option>
+                <option value="1oz">1oz</option>
+                <option value="5oz">5oz</option>
+                <option value="10oz">10oz</option>
+                <option value="1kg">1kg</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+              <textarea rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Tell us about your trading requirements"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-black-red-white text-white  text-primary py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-all duration-300">
+              Send Inquiry
+            </button>
+          </form>
         </div>
-    </section>
-
-<!-- Contact Form -->
-<section id="gold-contact" class="py-16 px-4 bg-accent">
-  <div class="max-w-2xl mx-auto">
-    <h2 class="text-3xl font-bold mb-8 text-center">Contact Our Trading Team</h2>
-    <form id="goldContactForm" class="space-y-6 bg-primary rounded-xl p-8 shadow-2xl">
-      <div>
-        <label class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-        <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Enter your full name">
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-        <input type="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Enter your email">
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-300 mb-2">Company</label>
-        <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Enter your company name">
-      </div>
-      
-      <!-- Gold Weight Select -->
-      <div>
-        <label  class="block text-sm font-medium text-gray-300 mb-2">Select Gold Weight</label>
-        <select id="weight-select" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent">
-          <option value="1g">1g</option>
-          <option value="5g">5g</option>
-          <option value="10g">10g</option>
-          <option value="1oz">1oz</option>
-          <option value="5oz">5oz</option>
-          <option value="10oz">10oz</option>
-          <option value="1kg">1kg</option>
-        </select>
-      </div>
-
-      <div>
-        <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-        <textarea rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Tell us about your trading requirements"></textarea>
-      </div>
-
-      <button type="submit" class="w-full bg-black-red-white text-white  text-primary py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-all duration-300">
-        Send Inquiry
-      </button>
-    </form>
-  </div>
-</section>
+      </section>
+    </div>
     <footer class="bg-primary text-white py-12">
       <div class="container mx-auto px-6 md:px-12">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-10">

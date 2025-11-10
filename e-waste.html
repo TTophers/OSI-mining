@@ -11,24 +11,26 @@
 
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#000000',
-                        secondary: '#fbbf24',
-                        accent: '#01122A'
-                    },
-                    backgroundImage: {
-                      'black-red-white': 'linear-gradient(to right, black, #ff0000, white)',
-      }
-                }
-            }
+          theme: {
+            extend: {
+              colors: {
+                primary: '#000000',       // Black for backgrounds/nav/footer
+                secondary: '#fbbf24',     // Dark gold for headings, text highlights
+                accent: '#01122A',        // Dark navy/black for mobile menu, CTA backgrounds
+                bordergold: '#6d5324',    // Dark bronze/gold for borders
+              },
+              backgroundImage: {
+                'black-red-white': 'linear-gradient(to right, black, #ff0000)', 
+                'black-gold-soft': 'linear-gradient(135deg, #000000, #161309, #000000)',
+              },
+            },
+          },
         }
-    </script>
+        </script>
 </head>
-<body class="bg-primary text-white">
+<body class="bg-black-gold-soft">
 
-
+<div class="bg-black-gold-soft text-white">
               <style>
                   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
                   * {
@@ -84,7 +86,7 @@
                 </div>
                 
                 <!-- Mobile Menu -->
-                <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4 pb-8 mx-2 rounded-b-2xl shadow-xl border-t-2 border-gray-700">
+                <div id="mobile-menu" class="hidden md:hidden mobile-menu py-4 pb-8 mx-2 rounded-b-2xl shadow-xl border-t-2 border-gray-700">
                     <div class="flex flex-col space-y-4 px-4">
                         <a href="index.html" class="nav-link text-secondary hover:text-white">About Us</a>
                         <a href="e-waste.html" class="nav-link text-secondary hover:text-white">oporations</a> 
@@ -96,40 +98,43 @@
             </div>
         </nav>
     
-    <!-- Header -->
-    <section class="pt-32 pb-20 px-4 bg-gradient-to-br from-primary to-accent">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">E-Waste Recycling Solutions</h1>
-            <p class="text-xl text-gray-300">Transforming electronic waste into valuable resources through innovative recycling processes</p>
-        </div>
-    </section>
+    <div>
+      <!-- Header -->
+      <section class="pt-32 pb-20 px-4">
+          <div class="max-w-4xl mx-auto text-center">
+              <h1 class="text-5xl md:text-6xl font-bold mb-6">Operations</h1>
+              <p class="text-xl text-gray-300">Integrated Mining, Refining, and Technology Systems</p>
+          </div>
+      </section>
 
-    <!-- E-Waste Explanation -->
-    <section class="py-16 px-4">
-        <div class="max-w-4xl mx-auto">
-            <div class="bg-accent rounded-xl p-8 shadow-2xl">
-                <h2 class="text-3xl font-bold mb-6 text-secondary">What is E-Waste?</h2>
-            <p class="text-lg text-gray-300 mb-6">
-                Electronic waste, or e-waste, refers to discarded electrical or electronic devices. With the rapid advancement of , e-waste has become one of the fastest-growing waste streams globally, containing both valuable materials and hazardous substances.
-            </p>
-            <p class="text-lg text-gray-300">
-                At OSI Mineing Resources, we've developed cutting-edge processes to safely extract precious metals like gold, silver, and copper from e-waste, reducing environmental impact while recovering valuable resources.
-            </p>
-        </div>
-    </section>
+      <!-- E-Waste Explanation -->
+      <section class="py-16 px-4">
+          <div class="max-w-4xl mx-auto">
+              <div class="bg-black/50 rounded-xl p-8 shadow-2xl border border-bordergold">
+                  <h2 class="text-3xl font-bold mb-6 text-secondary">Operational Framework</h2>
+              <p class="text-lg text-gray-300 mb-6">
+                  OSI Mining & Resources operates through an integrated framework combining advanced mining techniques, state-of-the-art refining processes, and innovative technology systems to ensure efficient resource recovery and sustainable development.
+              </p>
+              <p class="text-lg text-gray-300">
+                  This approach leverages geological expertise, electrochemical refining technologies, and strategic partnerships to optimize operations and minimize environmental impact.
+              </p>
+          </div>
+      </section>
+    </div>
 
     <!-- Process Steps -->
+    <div>
     <section class="py-20 px-4">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16">Our 4-Step Recycling Process</h2>
+            <h2 class="text-4xl font-bold text-center mb-16">Operational Framework Steps</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Step 1 -->
                 <div class="text-center group">
                     <div class="bg-secondary text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-all duration-300">
                         <span class="text-2xl font-bold">1</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Collection</h3>
-                    <p class="text-gray-300">Strategic collection points and partnerships ensure efficient e-waste gathering from various sources.</p>
+                    <h3 class="text-2xl font-bold mb-4">Exploration & Evaluation</h3>
+                    <p class="text-gray-300">OSI’s exploration model utilizes comprehensive geological assessments and state-of-the-art surveying methods to identify and evaluate mineral resources effectively.</p>
                 </div>
                 
                 <!-- Step 2 -->
@@ -137,8 +142,8 @@
                     <div class="bg-secondary text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-all duration-300">
                         <span class="text-2xl font-bold">2</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Sorting</h3>
-                    <p class="text-gray-300">Advanced sorting technologies separate materials by type and composition for optimal processing.</p>
+                    <h3 class="text-2xl font-bold mb-4">Refining & Processing</h3>
+                    <p class="text-gray-300">Our Electrochemical Refining Plant employs advanced refining systems to process extracted materials with high precision and efficiency.</p>
                 </div>
                 
                 <!-- Step 3 -->
@@ -146,8 +151,8 @@
                     <div class="bg-secondary text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-all duration-300">
                         <span class="text-2xl font-bold">3</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Extraction</h3>
-                    <p class="text-gray-300">Specialized extraction processes recover precious metals and valuable components from electronic devices.</p>
+                    <h3 class="text-2xl font-bold mb-4">Research & Technology Integration</h3>
+                    <p class="text-gray-300">Collaborating with the Idaho National Laboratory (INL) and leading universities, OSI advances refining research and integrates cutting-edge technologies into operations.</p>
                 </div>
                 
                 <!-- Step 4 -->
@@ -155,45 +160,44 @@
                     <div class="bg-secondary text-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-all duration-300">
                         <span class="text-2xl font-bold">4</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Refining</h3>
-                    <p class="text-gray-300">High-purity refining techniques transform recovered materials into market-ready products and resources.</p>
+                    <h3 class="text-2xl font-bold mb-4">Sustainability & Environmental Stewardship</h3>
+                    <p class="text-gray-300">OSI is committed to sustainable engineering practices and strict environmental compliance to ensure responsible resource development.</p>
                 </div>
             </div>
         </div>
     </section>
+    </div>
 
     <!-- Environmental Impact -->
-    <section class="py-16 px-4 bg-accent">
+    <div>
+    <section class="py-16 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Environmental Impact</h2>
+            <h2 class="text-3xl font-bold mb-6">Operational Philosophy</h2>
             <p class="text-lg text-gray-300 mb-8">
-                Our e-waste recycling processes prevent hazardous materials from entering landfills while recovering valuable resources, contributing to a circular economy and reducing the need for new mining operations.
+                OSI Mining & Resources operates with a philosophy centered on Integrity in Development, Innovation in Refining, and Independence in Supply, ensuring a responsible and forward-thinking approach to resource management.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-primary rounded-lg p-6">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="tool" class="w-8 h-8 mx-auto"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Reduced Mining</h3>
-                    <p class="text-gray-300">Less need for new mining operations through material recovery</p>
-                </div>
-                <div class="bg-primary rounded-lg p-6">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="droplet" class="w-8 h-8 mx-auto"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Water Protection</h3>
-                    <p class="text-gray-300">Preventing hazardous substances from contaminating water sources</p>
-                </div>
-                <div class="bg-primary rounded-lg p-6">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="wind" class="w-8 h-8 mx-auto"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Carbon Reduction</h3>
-                    <p class="text-gray-300">Lower carbon footprint compared to traditional mining methods</p>
-                </div>
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-secondary">Looking Ahead</h3>
+                <p class="text-gray-300">
+                    Our project sites span the Western United States, including Idaho, Nevada, and Utah, where we continue to advance our vision of sustainable mining and refining technologies.
+                </p>
             </div>
         </div>
     </section>
+    </div>
+
+    <!-- Disclosure Section -->
+    <div>
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Disclosure</h2>
+            <p class="text-lg text-gray-300">
+                This website and its content are for informational purposes only and do not constitute an offer to sell or a solicitation of an offer to buy any securities. Forward-looking statements are subject to risks and uncertainties that could cause actual results to differ materially. Readers should not rely solely on the information provided herein and are encouraged to conduct their own due diligence.
+            </p>
+        </div>
+    </section>
+    </div>
+</div>
 
     <footer class="bg-primary text-white py-12">
       <div class="container mx-auto px-6 md:px-12">

@@ -9,23 +9,25 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#000000',
-                        secondary: '#fbbf24',
-                        accent: '#01122A'
-                    },
-                    backgroundImage: {
-                      'black-red-white': 'linear-gradient(to right, black, #ff0000)',
-      }
-                }
-            }
-        }
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#000000',       // Black for backgrounds/nav/footer
+            secondary: '#fbbf24',     // Dark gold for headings, text highlights
+            accent: '#01122A',        // Dark navy/black for mobile menu, CTA backgrounds
+            bordergold: '#6d5324',    // Dark bronze/gold for borders
+          },
+          backgroundImage: {
+            'black-red-white': 'linear-gradient(to right, black, #ff0000)', 
+            'black-gold-soft': 'linear-gradient(135deg, #000000, #161309, #000000)',
+          },
+        },
+      },
+    }
     </script>
 </head>
-<body class="bg-primary text-white">
+<body class="bg-black-gold-soft text-white">
 
 
               <style>
@@ -37,7 +39,7 @@
                       font-family: 'Inter', sans-serif;
                   }
                   #hero {
-  min-height: calc(100vh - 4rem); /* adjust 4rem to your nav height */
+  min-height: calc(100vh - 4rem); 
 }
                   nav {
                       background: black;
@@ -195,33 +197,35 @@
       </article>
       <div class="h-16 bg-gradient-to-b from-black/80 to-transparent"></div>
 
-      <!-- Sustainability / Process highlight -->
-      <section class="bg-primary py-16">
-        <div class="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h3 class="text-2xl font-bold text-secondary mb-4">Sustainable Practices Across Sites</h3>
-            <p class="text-gray-300 mb-6">From water recycling and progressive reclamation to e-waste recovery and community investment, OSI Mines prioritizes long-term environmental stewardship.</p>
-            <a href="e-waste.html" class="inline-block border border-secondary text-secondary px-5 py-2 rounded-md font-medium hover:bg-secondary hover:text-primary transition">Learn about E-Waste Recovery</a>
+      <!-- Sustainability / Process highlight and Dual CTA unified gradient wrapper -->
+      <div class="bg-black-gold-soft py-16">
+        <!-- Sustainability / Process highlight -->
+        <section>
+          <div class="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-secondary mb-4">Sustainable Practices Across Sites</h3>
+              <p class="text-gray-300 mb-6">From water recycling and progressive reclamation to e-waste recovery and community investment, OSI Mines prioritizes long-term environmental stewardship.</p>
+              <a href="e-waste.html" class="inline-block border border-secondary text-secondary px-5 py-2 rounded-md font-medium hover:bg-secondary hover:text-primary transition">Learn about E-Waste Recovery</a>
+            </div>
+            <div class="rounded-xl overflow-hidden">
+              <div class="h-64 md:h-44 bg-cover bg-center" style="background-image: url('http://static.photos/industry/tech-1');"></div>
+            </div>
           </div>
-          <div class="rounded-xl overflow-hidden">
-            <div class="h-64 md:h-44 bg-cover bg-center" style="background-image: url('http://static.photos/industry/tech-1');"></div>
+        </section>
+        <!-- Dual CTA for Tech + Investors -->
+        <section>
+          <div class="container mx-auto px-24 pt-16 grid md:grid-cols-2 gap-10">
+            <a href="e-waste.html" class="block border border-bordergold bg-gradient-to-r from-black/40 to-black/25 rounded-xl p-8 hover:scale-102 transform transition shadow-lg">
+              <h4 class="text-xl font-semibold text-secondary mb-2">Our Operations</h4>
+              <p class="text-gray-200 mb-4">Deep dive into the machines and processes that power our operations.</p>
+            </a>
+            <a href="investors.html" class="block border border-bordergold bg-gradient-to-r from-black/40 to-black/25 rounded-xl p-8 hover:scale-102 transform transition shadow-lg">
+              <h4 class="text-xl font-semibold text-secondary mb-2">Investor Relations</h4>
+              <p class="text-gray-200 mb-4">PNL highlights, reports, and growth strategy — connect with our investor team.</p>
+            </a>
           </div>
-        </div>
-      </section>
-      <div class="h-16 bg-gradient-to-t from-black/80 to-transparent"></div>
-      <!-- Dual CTA for Tech + Investors -->
-      <section class="bg-accent py-12">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-6">
-          <a href="e-waste.html" class="block bg-gradient-to-r from-black/40 to-black/25 rounded-xl p-8 hover:scale-102 transform transition shadow-lg">
-            <h4 class="text-xl font-semibold text-secondary mb-2">Our Operations</h4>
-            <p class="text-gray-200 mb-4">Deep dive into the machines and processes that power our operations.</p>
-          </a>
-          <a href="investors.html" class="block bg-gradient-to-r from-black/40 to-black/25 rounded-xl p-8 hover:scale-102 transform transition shadow-lg">
-            <h4 class="text-xl font-semibold text-secondary mb-2">Investor Relations</h4>
-            <p class="text-gray-200 mb-4">PNL highlights, reports, and growth strategy — connect with our investor team.</p>
-          </a>
-        </div>
-      </section>
+        </section>
+      </div>
     </section>
 
 

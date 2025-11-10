@@ -109,67 +109,180 @@
       </section>
       <!-- Introduction and Product Grid -->
       <section class="pt-16 px-4">
-          <div class="max-w-4xl mx-auto mb-12 text-center">
-              <h2 class="text-3xl font-bold mb-4 text-secondary">Our Gold Products</h2>
-              <p class="text-gray-300 text-lg max-w-3xl mx-auto">
-                  At OSI Mining & Resources, we specialize in premium gold products obtained through advanced e-waste refinement processes. Our commitment to sustainability and quality ensures that every product meets the highest standards.
-              </p>
-          </div>
-          <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
-          </div>
-      </section>
-
-      <!-- Types of Gold We Trade Section (Integrated with Product Cards) -->
-      <section class="py-16 px-4">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 justify-center">
-          <!-- Bullion Bars Card with Integrated Dropdown and Price -->
-          <div class="relative rounded-xl shadow-2xl flex flex-col overflow-hidden mx-auto w-full max-w-md">
-            <div class="relative w-full h-64 flex flex-col justify-end">
-              <img src="content/gold-bar.jpg" alt="Gold Bullion Bar" class="absolute inset-0 w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-              <div class="relative z-10 p-6 flex flex-col h-full justify-end">
-                <h3 class="text-xl font-bold mb-2 text-secondary">Gold Bullion Bar</h3>
-                <p class="text-gray-300 mb-2 flex-grow">Certified gold bullion bars, perfect for secure storage and trading.</p>
-                <div class="flex flex-col mb-2">
-                  <label for="weight-select-2" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
-                  <select id="weight-select-2" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('product2', this.value)">
-                    <option value="1g">5oz</option>
-                    <option value="5g">10oz</option>
-                    <option value="10g">20oz</option>
-                    <option value="1oz">1kilo</option>
-                  </select>
-                  <div class="text-secondary font-semibold text-lg mt-1" id="price-product2">$57.00</div>
+        <div class="max-w-4xl mx-auto mb-12 text-center">
+          <h2 class="text-3xl font-bold mb-4 text-secondary">Our Gold Products</h2>
+          <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+            At OSI Mining & Resources, we specialize in premium gold products obtained through advanced e-waste refinement processes. Our commitment to sustainability and quality ensures that every product meets the highest standards.
+          </p>
+        </div>
+        <!-- Tabbed interface for metals (Unified Container) -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="border-8 border-bordergold rounded-2xl shadow-[0_25px_50px_rgba(0,0,0,0.8)] p-1 mb-12">
+            <div class="bg-black-gold-soft rounded-xl p-8 shadow-2xl">
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+              <button class="tab-btn px-4 py-2 rounded-xl text-secondary bg-black/30 font-semibold focus:outline-none transition-all duration-200" data-tab="gold" id="tab-gold">24K Gold</button>
+              <button class="tab-btn px-4 py-2 rounded-xl text-secondary bg-black/30 font-semibold focus:outline-none transition-all duration-200" data-tab="silver" id="tab-silver">Silver</button>
+              <button class="tab-btn px-4 py-2 rounded-xl text-secondary bg-black/30 font-semibold focus:outline-none transition-all duration-200" data-tab="platinum" id="tab-platinum">Platinum</button>
+              <button class="tab-btn px-4 py-2 rounded-xl text-secondary bg-black/30 font-semibold focus:outline-none transition-all duration-200" data-tab="palladium" id="tab-palladium">Palladium</button>
+            </div>
+            <!-- Tab Content Area -->
+            <div>
+              <!-- 24K Gold Tab -->
+              <div class="tab-content" id="tab-content-gold">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <!-- Gold Coin Card -->
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full h-64 flex flex-col justify-end">
+                      <img src="content/gold-coin.jpg" alt="24K Gold" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 flex flex-col h-full justify-end">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">24K Refined Gold</h3>
+                        <p class="text-gray-300 mb-2 flex-grow">Pure 24 karat gold refined to perfection, ideal for investment and jewelry crafting.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-gold" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-gold" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('gold', this.value)">
+                            <option value="1g">1g</option>
+                            <option value="5g">5g</option>
+                            <option value="10g">10g</option>
+                            <option value="1oz">1oz</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-lg mt-1" id="price-gold">$55.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Gold Bar Card -->
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full h-64 flex flex-col justify-end">
+                      <img src="content/gold-bar.jpg" alt="24K Gold Bar" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 flex flex-col h-full justify-end">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">24K Refined Gold Bar</h3>
+                        <p class="text-gray-300 mb-2 flex-grow">High-purity gold bars suitable for investment and collection.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-gold-bar" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-gold-bar" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('gold-bar', this.value)">
+                            <option value="1g">1g</option>
+                            <option value="5g">5g</option>
+                            <option value="10g">10g</option>
+                            <option value="1oz">1oz</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-lg mt-1" id="price-gold-bar">$55.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Silver Tab -->
+              <div class="tab-content hidden" id="tab-content-silver">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <!-- Silver Bar Card -->
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full h-64 flex flex-col justify-end">
+                      <img src="content/silver-bar.jpg" alt="Silver Bar" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 flex flex-col h-full justify-end">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Fine Silver Bar</h3>
+                        <p class="text-gray-300 mb-2 flex-grow">Investment-grade silver bars, refined for purity and reliability.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-silver" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-silver" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('silver', this.value)">
+                            <option value="1oz">1oz</option>
+                            <option value="5oz">5oz</option>
+                            <option value="10oz">10oz</option>
+                            <option value="1kg">1kg</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-lg mt-1" id="price-silver">$27.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Silver Coin Card -->
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full h-64 flex flex-col justify-end">
+                      <img src="content/silver-coin.jpg" alt="Fine Silver Coin" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 flex flex-col h-full justify-end">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Fine Silver Coin</h3>
+                        <p class="text-gray-300 mb-2 flex-grow">Silver coins minted to perfection, ideal for investors and collectors.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-silver-coin" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-silver-coin" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('silver-coin', this.value)">
+                            <option value="1oz">1oz</option>
+                            <option value="5oz">5oz</option>
+                            <option value="10oz">10oz</option>
+                            <option value="1kg">1kg</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-lg mt-1" id="price-silver-coin">$27.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Platinum Tab -->
+              <div class="tab-content hidden" id="tab-content-platinum">
+                <div class="flex justify-center">
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full h-64 flex flex-col justify-end">
+                      <img src="content/platinum-bar.jpg" alt="Platinum Bar" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 flex flex-col h-full justify-end">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Platinum Ingot</h3>
+                        <p class="text-gray-300 mb-2 flex-grow">High-purity platinum ingots, trusted by investors and industry professionals.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-platinum" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-platinum" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('platinum', this.value)">
+                            <option value="1g">1g</option>
+                            <option value="5g">5g</option>
+                            <option value="10g">10g</option>
+                            <option value="1oz">1oz</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-lg mt-1" id="price-platinum">$950.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Palladium Tab -->
+              <div class="tab-content hidden" id="tab-content-palladium">
+                <div class="flex justify-center">
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full h-64 flex flex-col justify-end">
+                      <img src="content/palladium-bar.jpg" alt="Palladium Bar" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 flex flex-col h-full justify-end">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Palladium Bar</h3>
+                        <p class="text-gray-300 mb-2 flex-grow">Premium palladium bars, refined for industrial and investment purposes.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-palladium" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-palladium" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('palladium', this.value)">
+                            <option value="1g">1g</option>
+                            <option value="5g">5g</option>
+                            <option value="10g">10g</option>
+                            <option value="1oz">1oz</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-lg mt-1" id="price-palladium">$1,350.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Gold Coins Card with Integrated Dropdown and Price -->
-          <div class="relative rounded-xl shadow-2xl flex flex-col overflow-hidden mx-auto w-full max-w-md">
-            <div class="relative w-full h-64 flex flex-col justify-end">
-              <img src="content/gold-coin.jpg" alt="Gold Coins" class="absolute inset-0 w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-              <div class="relative z-10 p-6 flex flex-col h-full justify-end">
-                <h3 class="text-xl font-bold mb-2 text-secondary">24K Refined Gold</h3>
-                <p class="text-gray-300 mb-2 flex-grow">Pure 24 karat gold refined to perfection, ideal for investment and jewelry crafting.</p>
-                <div class="flex flex-col mb-2">
-                  <label for="weight-select-1" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
-                  <select id="weight-select-1" class="mb-2 p-2 rounded bg-gray-800 text-white" onchange="updatePrice('product1', this.value)">
-                    <option value="1g">1g</option>
-                    <option value="5g">5g</option>
-                    <option value="10g">10g</option>
-                    <option value="1oz">1oz</option>
-                  </select>
-                  <div class="text-secondary font-semibold text-lg mt-1" id="price-product1">$55.00</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Types of Gold We Trade Section (Integrated with Product Cards) -->
       <section class="px-4 text-center">
           <div class="max-w-4xl mx-auto mb-12">
             <a href="#goldContactForm" class="text-3xl font-bold mb-4 text-secondary hover:underline hover:text-yellow-300 transition-all duration-300">
-              To Get Gold, Email Us Below
+              To Order Gold, Please Contact us Below
             </a>
           </div>
         </section>
@@ -316,40 +429,97 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.js"></script>
     <script src="script.js"></script>
     <script>
+      // Prices for each tab product and weights
       const prices = {
-        product1: {
-          "5oz": 55.00,
-          "10g": 270.00,
-          "20g": 530.00,
-          "1kilo": 1650.00
+        gold: {
+          "1g": 55.00,
+          "5g": 270.00,
+          "10g": 530.00,
+          "1oz": 1650.00
         },
-        product2: {
-            "5oz": 55.00,
-          "10g": 270.00,
-          "20g": 530.00,
-          "1kilo": 1650.00
+        "gold-bar": {
+          "1g": 55.00,
+          "5g": 270.00,
+          "10g": 530.00,
+          "1oz": 1650.00
         },
-        product3: {
-          "5oz": 55.00,
-          "10g": 270.00,
-          "20g": 530.00,
-          "1kilo": 1650.00
+        silver: {
+          "1oz": 27.00,
+          "5oz": 130.00,
+          "10oz": 250.00,
+          "1kg": 800.00
+        },
+        "silver-coin": {
+          "1oz": 27.00,
+          "5oz": 130.00,
+          "10oz": 250.00,
+          "1kg": 800.00
+        },
+        platinum: {
+          "1g": 950.00,
+          "5g": 4650.00,
+          "10g": 9200.00,
+          "1oz": 29500.00
+        },
+        palladium: {
+          "1g": 1350.00,
+          "5g": 6650.00,
+          "10g": 13200.00,
+          "1oz": 42000.00
         }
       };
 
       function updatePrice(productId, weight) {
         const priceElement = document.getElementById(`price-${productId}`);
         if (prices[productId] && prices[productId][weight]) {
-          priceElement.textContent = `$${prices[productId][weight].toFixed(2)}`;
+          priceElement.textContent = `$${prices[productId][weight].toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
         }
       }
 
-      // Initialize default prices on page load
+      // Tab switching
       document.addEventListener('DOMContentLoaded', () => {
-        Object.keys(prices).forEach(productId => {
-          const select = document.getElementById(`weight-select-${productId.slice(-1)}`);
+        // Tab logic
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        function activateTab(tab) {
+          tabBtns.forEach(btn => {
+            if (btn.dataset.tab === tab) {
+              btn.classList.add('bg-secondary', 'text-black');
+              btn.classList.remove('text-secondary', 'bg-black/30');
+            } else {
+              btn.classList.remove('bg-secondary', 'text-black');
+              btn.classList.add('text-secondary', 'bg-black/30');
+            }
+          });
+          tabContents.forEach(content => {
+            if (content.id === `tab-content-${tab}`) {
+              content.classList.remove('hidden');
+            } else {
+              content.classList.add('hidden');
+            }
+          });
+        }
+        tabBtns.forEach(btn => {
+          btn.addEventListener('click', () => activateTab(btn.dataset.tab));
+        });
+        // Activate the first tab by default
+        activateTab('gold');
+
+        // Set default prices for each tab and new cards
+        [
+          'gold',
+          'gold-bar',
+          'silver',
+          'silver-coin',
+          'platinum',
+          'palladium'
+        ].forEach(productId => {
+          const select = document.getElementById(`weight-select-${productId}`);
           if (select) {
             updatePrice(productId, select.value);
+            select.addEventListener('change', function() {
+              updatePrice(productId, this.value);
+            });
           }
         });
       });

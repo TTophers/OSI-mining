@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <!-- FontAwesome CDN for map marker icons -->
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
     <script>
     tailwind.config = {
       theme: {
@@ -73,8 +75,8 @@
                           
                         <!-- Desktop Menu -->
                       <div class="hidden md:flex items-center space-x-8">
-                        <a href="index.html" class="nav-link text-secondary hover:text-white">Home</a>
-                        <a href="about.html" class="nav-link text-secondary hover:text-white">About OSI Mining</a>                                    
+                        <a href="about.html" class="nav-link text-secondary hover:text-white">About OSI Mining</a>
+                        <a href="index.html" class="nav-link text-secondary hover:text-white">OSI Mines</a>                                    
                         <a href="e-waste.html" class="nav-link text-secondary hover:text-white">Operations</a>
                         <a href="tech.html" class="nav-link text-secondary hover:text-white">Technology</a>                             
                         <a href="investors.html" class="nav-link text-secondary hover:text-white">Investors</a>
@@ -90,8 +92,8 @@
                 <!-- Mobile Menu -->
                 <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4 pb-8 mx-2 rounded-b-2xl shadow-xl border-t-2 border-gray-700">
                     <div class="flex flex-col space-y-4 px-4">
-                        <a href="index.html" class="nav-link text-secondary hover:text-white">Home</a>
                         <a href="about.html" class="nav-link text-secondary hover:text-white">About OSI Mineing</a>
+                        <a href="index.html" class="nav-link text-secondary hover:text-white">OSI Mines</a>
                         <a href="e-waste.html" class="nav-link text-secondary hover:text-white">Operations</a> 
                         <a href="tech.html" class="nav-link text-secondary hover:text-white">Technology</a>                          
                         <a href="investors.html" class="nav-link text-secondary hover:text-white">Investors</a>
@@ -102,7 +104,92 @@
         </nav>
 
 <!-- About OSI Mining Section -->
-<main class="pt-32 pb-24 bg-black-gold-soft text-white">
+<main class="bg-black-gold-soft text-white">
+  <!-- Hero with Full Background Image -->
+  <section id="hero" class="relative min-h-[80vh] mb-16 flex items-center justify-center px-6">
+    <div class="absolute inset-0">
+      <img src="content/0.jpeg" alt="OSI Mining Operations" class="w-full h-full object-cover brightness-75">
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+
+    <!-- Text Overlay -->
+    <div class="relative max-w-md md:max-w-xl mx-auto md:mx-0 md:ml-auto md:text-center text-center space-y-6 bg-black/50 p-6 rounded-xl shadow-lg">
+      <h1 class="text-4xl md:text-5xl font-bold text-secondary leading-tight">Pioneering America's Resource Independence</h1>
+      <p class="text-lg text-gray-300 leading-relaxed">
+        OSI Mining & Resources Inc. leads the charge in ethical mining, technological innovation, and sustainable practices that drive the future of American industry.
+      </p>
+      <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 justify-end">
+        <a href="#learn" class="px-6 py-3 bg-secondary text-black font-semibold rounded-lg hover:bg-yellow-400 transition">Learn More</a>
+        <a href="contact.html" class="px-6 py-3 border-2 border-secondary text-secondary font-semibold rounded-lg hover:bg-secondary hover:text-black transition">Contact OSI</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Info Rows -->
+  <section id="learn" class="max-w-6xl mx-auto px-6 mb-16 space-y-20">
+
+    <!-- Row 1: Text Left + Map Pins Right -->
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="text-left space-y-4">
+        <h2  class="text-4xl md:text-5xl font-bold text-secondary">About OSI Miening</h2>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+          OSI Mining & Resources Inc. is a Wyoming-based mining and respurce development, company focused an critical minerals, procious metals, and advanced technologies thatupport Americas clean-energy and industrial future.
+        </p>
+        <a href="#whoIsOSI" class="text-lg md:text-xl text-secondary font-semibold hover:underline">Discover Our Mission -></a>
+      </div>
+      <a href="index.html" class="block">
+        <div class="relative bg-black p-6 rounded-xl shadow-lg h-64 md:h-80">
+          <!-- Wyoming Pin -->
+          <div class="absolute top-10 right-5 flex items-center space-x-2">
+            <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
+            <span class="text-gray-300">Six Point Bull Elk Project</span>
+          </div>
+          <!-- Texas Pin -->
+          <div class="absolute bottom-5 left-24 flex items-center space-x-2">
+            <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
+            <span class="text-gray-300">Moonlight Project</span>
+          </div>
+          <!-- Colorado Pin -->
+          <div class="absolute top-20 left-40 flex items-center space-x-2">
+            <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
+            <span class="text-gray-300">Samson Project</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Row 2: Image Left + Text Right -->
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="rounded-2xl overflow-hidden shadow-lg">
+        <img src="content/1.jpg" alt="Operations Overview" class="w-full h-64 md:h-80 object-cover rounded-2xl">
+      </div>
+      <div class="text-left space-y-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-secondary">ADVANCED ENERGY SYSTEMS</h2>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+          Engineered for precision and sustainability - achieving, 8888 gold and siiver recovery through automated, environmentally sonsible.
+        </p>
+        <a href="e-waste.html" class="text-lg md:text-xl text-secondary font-semibold hover:underline">Explore Our operations -></a>
+      </div>
+    </div>
+
+    <!-- Row 3: Text Left + Two Buttons + Image Right -->
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="text-left space-y-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-secondary">GOLD & SILVER TRADING</h2>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+          Wholesale metals supply under verified U.S. compliance frameworks
+        </p>
+        <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
+          <a href="about.html" class="px-6 py-3 md:px-6 md:py-4 bg-secondary text-black font-semibold rounded-lg hover:bg-yellow-400 transition text-lg md:text-xl">Explore What We Offer</a>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-lg">
+        <img id="whoIsOSI"  src="content/2.jpg" alt="Collaboration Image" class="w-full h-64 md:h-80 object-cover rounded-2xl">
+      </div>
+    </div>
+
+  </section>
+
   <!-- Hero Section -->
   <section class="text-center mb-16 px-6">
     <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-3">
@@ -168,7 +255,7 @@
   </section>
 
   <!-- Commitment Section -->
-  <section class="max-w-5xl mx-auto bg-primary border border-bordergold rounded-2xl p-8">
+  <section class="max-w-5xl mb-10 mx-auto bg-primary border border-bordergold rounded-2xl p-8">
     <h2 class="text-2xl font-semibold text-secondary mb-4">Our Commitment</h2>
     <p class="text-gray-300 leading-relaxed mb-6">
       OSI Mining & Resources stands for integrity, innovation, and impact. Every project we undertake—

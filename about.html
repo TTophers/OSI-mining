@@ -126,43 +126,76 @@
 
   <!-- Custom Info Rows -->
   <section id="learn" class="max-w-6xl mx-auto px-6 mb-16 space-y-20">
-    <!-- Row 1: Text Left + Map Pins Right -->
-    <div class="grid grid-cols-2 gap-8 items-center">
-      <div class="max-w-full md:max-w-md text-left space-y-4">
-        <h2  class="text-2xl font-bold text-secondary">About OSI Miening</h2>
+    <!-- Row 1: Responsive layout (heading above, then image and text side-by-side on desktop, stacked on mobile) -->
+    <div class="flex flex-col md:grid md:grid-cols-2 gap-8 items-center">
+      <!-- Heading (always above for mobile, left for desktop) -->
+      <h2 class="text-2xl font-bold text-secondary mb-2 md:mb-0 md:col-span-2 md:row-span-1 md:hidden block">About OSI Miening</h2>
+      <!-- Text (left on desktop, below image on mobile) -->
+      <div class="order-2 md:order-1 max-w-full md:max-w-md text-left space-y-4 w-full">
+        <h2 class="text-2xl font-bold text-secondary mb-2 hidden md:block">About OSI Miening</h2>
+        <div class="md:hidden">
+          <a href="index.html" class="block mb-3">
+            <div class="relative bg-black p-6 rounded-xl shadow-lg w-full h-48 overflow-hidden">
+              <!-- Wyoming Pin -->
+              <div class="absolute top-10 right-5 flex items-center space-x-2">
+                <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
+                <span class="text-gray-300 text-xs leading-tight">Six Point Bull Elk Project</span>
+              </div>
+              <!-- Texas Pin -->
+              <div class="absolute bottom-5 left-24 flex items-center space-x-2">
+                <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
+                <span class="text-gray-300 text-xs leading-tight">Moonlight Project</span>
+              </div>
+              <!-- Colorado Pin -->
+              <div class="absolute top-20 left-40 flex items-center space-x-2">
+                <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
+                <span class="text-gray-300 text-xs leading-tight">Samson Project</span>
+              </div>
+            </div>
+          </a>
+        </div>
         <p class="text-base text-gray-300 leading-relaxed">
           OSI Mining & Resources Inc. is a Wyoming-based mining and respurce development, company focused an critical minerals, procious metals, and advanced technologies thatupport Americas clean-energy and industrial future.
         </p>
         <a href="#whoIsOSI" class="text-base text-secondary font-semibold hover:underline">Discover Our Mission -></a>
       </div>
-      <a href="index.html" class="block">
-        <div class="relative bg-black p-6 rounded-xl shadow-lg w-full md:w-1/2 h-48 md:h-48 overflow-hidden">
-          <!-- Wyoming Pin -->
-          <div class="absolute top-10 right-5 flex items-center space-x-2">
-            <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
-            <span class="text-gray-300 text-xs leading-tight">Six Point Bull Elk Project</span>
+      <!-- Image (right on desktop, above text on mobile) -->
+      <div class="order-1 md:order-2 w-full hidden md:block">
+        <a href="index.html" class="block">
+          <div class="relative bg-black p-6 rounded-xl shadow-lg w-full h-48 md:h-80 md:w-full overflow-hidden">
+            <!-- Wyoming Pin -->
+            <div class="absolute top-10 right-5 flex items-center space-x-2">
+              <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
+              <span class="text-gray-300 text-xs leading-tight">Six Point Bull Elk Project</span>
+            </div>
+            <!-- Texas Pin -->
+            <div class="absolute bottom-5 left-24 flex items-center space-x-2">
+              <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
+              <span class="text-gray-300 text-xs leading-tight">Moonlight Project</span>
+            </div>
+            <!-- Colorado Pin -->
+            <div class="absolute top-20 left-40 flex items-center space-x-2">
+              <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
+              <span class="text-gray-300 text-xs leading-tight">Samson Project</span>
+            </div>
           </div>
-          <!-- Texas Pin -->
-          <div class="absolute bottom-5 left-24 flex items-center space-x-2">
-            <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
-            <span class="text-gray-300 text-xs leading-tight">Moonlight Project</span>
-          </div>
-          <!-- Colorado Pin -->
-          <div class="absolute top-20 left-40 flex items-center space-x-2">
-            <i data-feather="map-pin" class="text-secondary w-6 h-6 transition-colors duration-200 hover:text-yellow-400"></i>
-            <span class="text-gray-300 text-xs leading-tight">Samson Project</span>
-          </div>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
 
-    <!-- Row 2: Image Left + Text Right -->
-    <div class="grid grid-cols-2 gap-8 items-center">
-      <div class="rounded-2xl overflow-hidden shadow-lg">
-        <img src="content/1.jpg" alt="Operations Overview" class="w-full h-48 object-cover rounded-2xl">
+    <!-- Row 2: Responsive layout (heading above, then image and text side-by-side on desktop, stacked on mobile) -->
+    <div class="flex flex-col md:grid md:grid-cols-2 gap-8 items-center mt-12">
+      <!-- Heading (always above for mobile, right for desktop) -->
+      <h2 class="text-2xl font-bold text-secondary mb-2 md:mb-0 md:col-span-2 md:row-span-1 md:hidden block">ADVANCED ENERGY SYSTEMS</h2>
+      <!-- Image (left on desktop, above text on mobile) -->
+      <div class="order-2 md:order-1 w-full">
+        <div class="rounded-2xl overflow-hidden shadow-lg mb-3 md:mb-0">
+          <img src="content/1.jpg" alt="Operations Overview" class="w-full h-48 object-cover rounded-2xl">
+        </div>
       </div>
-      <div class="text-left space-y-4">
-        <h2 class="text-2xl font-bold text-secondary">ADVANCED ENERGY SYSTEMS</h2>
+      <!-- Text (right on desktop, below image on mobile) -->
+      <div class="order-3 md:order-2 text-left space-y-4 w-full">
+        <h2 class="text-2xl font-bold text-secondary mb-2 hidden md:block">ADVANCED ENERGY SYSTEMS</h2>
         <p class="text-base text-gray-300 leading-relaxed">
           Engineered for precision and sustainability - achieving, 8888 gold and siiver recovery through automated, environmentally sonsible.
         </p>

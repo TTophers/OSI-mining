@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSI Mining & Resources - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#000000',
-              secondary: '#fbbf24',
-              accent: '#01122A',
-              bordergold: '#6d5324',
-            },
-            backgroundImage: {
-              'black-red-white': 'linear-gradient(to right, black, #ff0000)',
-              'black-gold-soft': 'linear-gradient(135deg, #000000, #161309, #000000)',
-            },
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#000000',       // Black for backgrounds/nav/footer
+            secondary: '#fbbf24',     // Dark gold for headings, text highlights
+            accent: '#01122A',        // Dark navy/black for mobile menu, CTA backgrounds
+            bordergold: '#6d5324',    // Dark bronze/gold for borders
+          },
+          backgroundImage: {
+            'black-red-white': 'linear-gradient(to right, black, #ff0000)', 
+            'black-gold-soft': 'linear-gradient(135deg, #000000, #161309, #000000)',
           },
         },
-      }
-      </script>
+      },
+    }
+    </script>
 </head>
 <body class="bg-black-gold-soft text-white">
 
@@ -39,6 +38,9 @@
                       box-sizing: border-box;
                       font-family: 'Inter', sans-serif;
                   }
+                  #hero {
+  min-height: calc(100vh - 4rem); 
+}
                   nav {
                       background: black;
                   }
@@ -99,48 +101,108 @@
             </div>
         </nav>
 
-<section class="pt-32 pb-16 px-4 text-center bg-black-gold-soft">
-    <h1 class="text-4xl font-bold text-secondary mb-6">Technology</h1>
-    <p class="max-w-3xl mx-auto text-gray-300 mb-12">
-        At OSI Mining & Resources Inc., we're redefining how critical minerals and precious metals are refined in the United States. Our proprietary systems merge advanced hydrometallurgical techniques with sustainable engineering to deliver high-purity outputs while drastically reducing environmental impact.
+<!-- About OSI Mining Section -->
+<main class="pt-32 pb-24 bg-black-gold-soft text-white">
+  <!-- Hero Section -->
+  <section class="text-center mb-16 px-6">
+    <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-3">
+      About OSI Mining & Resources Inc.
+    </h1>
+    <p class="text-xl md:text-2xl font-light text-gray-300">
+      Pioneering America's Resource Independence
     </p>
+  </section>
 
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div class="bg-black/20 p-6 rounded-lg shadow-lg border border-bordergold">
-            <h2 class="text-2xl font-semibold text-secondary mb-4">A New Standard in Refining</h2>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-                <li>Selective chemical recovery using advanced solvent-free reactions</li>
-                <li>Reagent recycling systems that minimize chemical consumption</li>
-                <li>Zero-wastewater configurations that protect local ecosystems</li>
-                <li>Compact modular design enabling rapid deployment and scalability</li>
-            </ul>
-        </div>
+  <!-- Company Overview -->
+  <section class="max-w-5xl mx-auto bg-primary border border-bordergold rounded-2xl shadow-lg p-8 md:p-12 mb-16">
+    <p class="text-gray-300 leading-relaxed mb-6">
+      OSI Mining & Resources Inc. is a Wyoming-incorporated critical minerals and precious metals
+      company committed to advancing domestic supply, responsible extraction, and sustainable trade
+      within the United States.
+    </p>
+    <p class="text-gray-300 leading-relaxed mb-6">
+      Our mission is to strengthen American resource independence through innovation, transparency,
+      and ethical development.
+    </p>
+    <p class="text-gray-300 leading-relaxed">
+      From exploration to commercialization, OSI focuses on acquiring strategic mineral assets and
+      metals, operating under rigorous U.S. compliance frameworks and guided by partnerships with
+      national laboratories, universities, and private industry leaders.
+      <br><br>
+      We serve as a bridge between resource ownership, advanced technology, and capital markets,
+      transforming natural potential into refined opportunity.
+    </p>
+  </section>
 
-        <div class="bg-black/50 p-6 rounded-lg shadow-lg border border-bordergold">
-            <h2 class="text-2xl font-semibold text-secondary mb-4">Precision Engineering Meets Sustainability</h2>
-            <p class="text-gray-300">
-                Each OSI system is engineered to operate with minimal energy use and near-zero emissions. Our refining methods employ advanced separation processes, including capillary electrophoretic and hydrometallurgical pathways, to extract critical minerals at unprecedented recovery rates — all while maintaining full environmental compliance.
-            </p>
-        </div>
-
-        <div class="bg-black/30 p-6 rounded-lg shadow-lg border border-bordergold">
-            <h2 class="text-2xl font-semibold text-secondary mb-4">Technology Integration</h2>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-                <li>Aqua Regia Refining Systems: Engineered in partnership with industry leaders for high-purity recovery of gold, silver, and platinum-group metals.</li>
-                <li>Advanced Separation Units: Developed in collaboration with national laboratories and research partners to isolate rare earth and strategic materials with precision and speed.</li>
-                <li>E-Waste Recovery Modules: Converting discarded electronics into valuable critical minerals through eco-conscious processes that close the materials loop.</li>
-            </ul>
-        </div>
+  <!-- Vision & Focus -->
+  <section class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 mb-16">
+    <div class="bg-primary border border-bordergold rounded-2xl p-8">
+      <h2 class="text-2xl font-semibold text-secondary mb-4">Our Vision</h2>
+      <p class="text-gray-300 leading-relaxed">
+        To become a U.S. leader in responsible mineral sourcing and advanced metals processing,
+        driving a new era of sustainable industrial growth and technological independence.
+      </p>
     </div>
 
-    <div class="mt-16">
-        <h2 class="text-3xl font-bold text-secondary mb-4">The OSI Difference</h2>
-        <p class="max-w-4xl mx-auto text-gray-300">
-            Unlike traditional extractive operations, OSI's technology prioritizes circular resource management, turning waste streams into economic opportunities. Our systems are American-made, environmentally responsible, and scalable from pilot to industrial capacity, positioning OSI at the forefront of sustainable mineral independence.
-        </p>
+    <div class="bg-primary border border-bordergold rounded-2xl p-8">
+      <h2 class="text-2xl font-semibold text-secondary mb-4">Our Focus</h2>
+      <ul class="space-y-3 text-gray-300 leading-relaxed list-disc list-inside">
+        <li>
+          <strong>Critical & Precious Metals:</strong> Gold, silver, platinum-group metals, and rare earth
+          elements essential to clean-energy and defense industries.
+        </li>
+        <li>
+          <strong>Domestic Development:</strong> Prioritizing American sites and operations to reduce
+          foreign dependency.
+        </li>
+        <li>
+          <strong>Technology Integration:</strong> Supporting innovation through collaborations and
+          advanced separation systems.
+        </li>
+        <li>
+          <strong>Compliance & Ethics:</strong> Upholding the highest standards under FinCEN, BSA, OFAC,
+          and EPA guidelines.
+        </li>
+      </ul>
     </div>
-</section>
+  </section>
 
+  <!-- Commitment Section -->
+  <section class="max-w-5xl mx-auto bg-primary border border-bordergold rounded-2xl p-8">
+    <h2 class="text-2xl font-semibold text-secondary mb-4">Our Commitment</h2>
+    <p class="text-gray-300 leading-relaxed mb-6">
+      OSI Mining & Resources stands for integrity, innovation, and impact. Every project we undertake—
+      whether exploration, acquisition, or trading—is executed with transparency, environmental care,
+      and a focus on long-term national benefit.
+    </p>
+    <blockquote class="border-l-4 border-secondary pl-4 italic text-gray-400">
+      "At OSI, we believe American resources should power American innovation."
+    </blockquote>
+  </section>
+</main>
+
+
+
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+  }
+  footer {
+      background: black;
+  }
+  .footer-link {
+      transition: all 0.3s ease;
+  }
+  .footer-link:hover {
+      color: #d4af37 !important;
+  }
+</style>
 <footer class="bg-primary text-white py-12">
   <div class="container mx-auto px-6 md:px-12">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10">

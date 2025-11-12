@@ -31,6 +31,7 @@
 <body class="bg-black-gold-soft text-white">
 
 
+
               <style>
                   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
                   * {
@@ -69,41 +70,65 @@
                       <span class="metallic-gold text-white text-xl font-bold">OSI Mining & Resources</span>
                       </a>
                           
-                        <!-- Desktop Menu -->
-                      <div class="hidden md:flex items-center space-x-8">
-                        <a href="about.html" class="nav-link text-secondary hover:text-white">About OSI Mining</a>
-                        <a href="index.html" class="nav-link text-secondary hover:text-white">OSI Mines</a>                                    
-                        <a href="e-waste.html" class="nav-link text-secondary hover:text-white">Operations</a>
-                        <a href="tech.html" class="nav-link text-secondary hover:text-white">Technology</a>                             
-                        <a href="investors.html" class="nav-link text-secondary hover:text-white">Investors</a>
-                        <a href="gold-trading.html" class="nav-link text-secondary hover:text-white">Gold & Trading</a>
-                    </div>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button class="md:hidden text-white" onclick="toggleMobileMenu()">
-                        <i data-feather="menu"></i>
-                    </button>
-                </div>
-                
-                <!-- Mobile Menu -->
-                <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4 pb-8 mx-2 rounded-b-2xl shadow-xl border-t-2 border-gray-700">
-                    <div class="flex flex-col space-y-4 px-4">
-                        <a href="about.html" class="nav-link text-secondary hover:text-white">About OSI Mineing</a>
-                        <a href="index.html" class="nav-link text-secondary hover:text-white">OSI Mines</a>
-                        <a href="e-waste.html" class="nav-link text-secondary hover:text-white">Operations</a> 
-                        <a href="tech.html" class="nav-link text-secondary hover:text-white">Technology</a>                          
-                        <a href="investors.html" class="nav-link text-secondary hover:text-white">Investors</a>
-                        <a href="gold-trading.html" class="nav-link text-secondary hover:text-white">Gold & Trading</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+                                    <!-- Desktop Menu -->
+                                    <div class="hidden md:flex items-center space-x-8">
+                                      <a href="about.html" class="nav-link text-secondary hover:text-white">About OSI Mining</a>
+                                      <a href="index.html" class="nav-link text-secondary hover:text-white">OSI Mines</a>                                    
+                                      <a href="e-waste.html" class="nav-link text-secondary hover:text-white">Operations</a>
+                                      <a href="tech.html" class="nav-link text-secondary hover:text-white">Technology</a>                             
+                                      <a href="investors.html" class="nav-link text-secondary hover:text-white">Investors</a>
+                                      <a href="gold-trading.html" class="nav-link text-secondary hover:text-white">Gold & Trading</a>
+                                      <a href="contact.html" class="nav-link text-secondary hover:text-white">Contact</a>
+                                  </div>
+                                  
+                                  <!-- Mobile Menu Button -->
+                                  <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                                      <i data-feather="menu"></i>
+                                  </button>
+                              </div>
+                              
+                              <!-- Mobile Menu -->
+                              <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4 pb-8 mx-2 rounded-b-2xl shadow-xl border-t-2 border-gray-700">
+                                  <div class="flex flex-col space-y-4 px-4">
+                                      <a href="about.html" class="nav-link text-secondary hover:text-white">About OSI Mineing</a>
+                                      <a href="index.html" class="nav-link text-secondary hover:text-white">OSI Mines</a>
+                                      <a href="e-waste.html" class="nav-link text-secondary hover:text-white">Operations</a> 
+                                      <a href="tech.html" class="nav-link text-secondary hover:text-white">Technology</a>                          
+                                      <a href="investors.html" class="nav-link text-secondary hover:text-white">Investors</a>
+                                      <a href="gold-trading.html" class="nav-link text-secondary hover:text-white">Gold & Trading</a>
+                                      <a href="contact.html" class="nav-link text-secondary hover:text-white">Contact</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </nav>
 
-<section class="pt-32 pb-16 px-4 text-center bg-black-gold-soft">
-    <h1 class="text-4xl font-bold text-secondary mb-6">OSI Technology</h1>
-    <p class="max-w-3xl mx-auto text-gray-300 mb-12">
-        At OSI Mining & Resources Inc., we're redefining how critical minerals and precious metals are refined in the United States. Our proprietary systems merge advanced hydrometallurgical techniques with sustainable engineering to deliver high-purity outputs while drastically reducing environmental impact.
+<!-- Hero Section -->
+<section 
+  class="relative h-[80vh] flex items-center justify-end bg-cover bg-center mb-10 text-white" 
+  style="background-image: url('content/4.jpg');"
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- Text Box -->
+  <div 
+    class="relative z-10 bg-black/70 p-8 md:p-12 max-w-lg rounded-lg text-left md:mr-16 mx-4 md:mx-0 
+           flex flex-col items-center md:items-start text-center md:text-left"
+  >
+    <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4">
+      OSI Technology
+    </h1>
+    <p class="text-gray-200 mb-6 leading-relaxed">
+      At OSI Mining & Resources Inc., we're redefining how critical minerals and precious metals are refined in the United States. Our proprietary systems merge advanced hydrometallurgical techniques with sustainable engineering to deliver high-purity outputs while drastically reducing environmental impact.
     </p>
+    <a 
+      href="about.html" 
+      class="inline-block bg-secondary text-black font-semibold px-6 py-3 rounded-md hover:bg-yellow-400 transition"
+    >
+      Learn More
+    </a>
+  </div>
+</section>
 
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <div class="bg-black/20 p-6 rounded-lg shadow-lg border border-bordergold">
@@ -133,7 +158,7 @@
         </div>
     </div>
 
-    <div class="mt-16">
+    <div class="mt-16 flex flex-col items-center justify-center text-center px-4 mb-20">
         <h2 class="text-3xl font-bold text-secondary mb-4">The OSI Difference</h2>
         <p class="max-w-4xl mx-auto text-gray-300">
             Unlike traditional extractive operations, OSI's technology prioritizes circular resource management, turning waste streams into economic opportunities. Our systems are American-made, environmentally responsible, and scalable from pilot to industrial capacity, positioning OSI at the forefront of sustainable mineral independence.

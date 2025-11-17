@@ -59,6 +59,9 @@
                   .mobile-menu {
                       transition: all 0.3s ease;
                   }
+                  .tradingview-widget-container {
+  background-color: #000 !important;
+}
               </style>
             
             
@@ -101,6 +104,27 @@
                               </div>
                           </div>
                       </nav>
+
+                      <div class="tradingview-widget-container w-full h-20 md:h-16 mb-4">
+                        <div class="tradingview-widget-container__widget"></div>
+                      </div>
+                      
+                      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async></script>
+                      
+                      <script type="text/javascript">
+                        new TradingView.widget({
+                          "container_id": "tradingview-widget-container",
+                          "symbols": [
+                            { "proName": "NASDAQ:AAPL", "title": "Apple" },
+                            { "proName": "NASDAQ:TSLA", "title": "Tesla" },
+                            { "proName": "NYSE:NEM", "title": "Newmont Mining" }
+                          ],
+                          "colorTheme": "dark",
+                          "isTransparent": false,
+                          "displayMode": "adaptive",
+                          "locale": "en"
+                        });
+                      </script>
     
     <!-- Unified Gradient Background Wrapper -->
     <div class="bg-black-gold-soft text-white">
@@ -446,34 +470,40 @@
       // Prices for each tab product and weights
       const prices = {
         gold: {
-          "1g": 55.00,
-          "5g": 270.00,
-          "10g": 530.00,
-          "1oz": 1650.00
+          "1g": 162.65,
+          "5g": 813.24,
+          "10g": 1626.48,
+          "1oz": 4355.90,
+          "5oz": 22094.50,
+          "10oz": 43363.00,
+          "1kg": 138647.40
         },
         "gold-bar": {
-          "1g": 55.00,
-          "5g": 270.00,
-          "10g": 530.00,
-          "1oz": 1650.00
+          "1g": 162.65,
+          "5g": 813.24,
+          "10g": 1626.48,
+          "1oz": 4355.90,
+          "5oz": 22094.50,
+          "10oz": 43363.00,
+          "1kg": 138647.40
         },
         silver: {
-          "1oz": 27.00,
-          "5oz": 130.00,
-          "10oz": 250.00,
-          "1kg": 800.00
+          "1oz": 59.02,
+          "5oz": 290.08,
+          "10oz": 650.16,
+          "1kg": 1878.32
         },
         "silver-coin": {
-          "1oz": 27.00,
-          "5oz": 130.00,
-          "10oz": 250.00,
-          "1kg": 800.00
+          "1oz": 59.02,
+          "5oz": 290.08,
+          "10oz": 650.16,
+          "1kg": 1878.32
         },
         platinum: {
-          "1g": 950.00,
-          "5g": 4650.00,
-          "10g": 9200.00,
-          "1oz": 29500.00
+          "1oz": 1854.02,
+          "5oz": 9770.10,
+          "10oz": 19540.20,
+          "1kg": 63075.58
         },
         palladium: {
           "1g": 1350.00,

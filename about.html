@@ -258,34 +258,75 @@
   </section>
 
   <!-- Vision & Focus -->
-  <section class="max-w-5xl mx-auto grid grid-cols-2 gap-8 mb-16">
-    <div class="bg-primary border border-bordergold rounded-2xl p-8">
-      <h2 class="text-xl font-semibold text-secondary mb-4">Our Vision</h2>
-      <p class="text-gray-300 leading-relaxed">
-        To become a U.S. leader in responsible mineral sourcing and advanced metals processing,
-        driving a new era of sustainable industrial growth and technological independence.
-      </p>
+  <section class="max-w-5xl mx-auto mb-16">
+    <!-- Desktop layout: 2 columns -->
+    <div class="hidden md:grid md:grid-cols-2 gap-8">
+      <div class="bg-primary border border-bordergold rounded-2xl p-8">
+        <h2 class="text-xl font-semibold text-secondary mb-4">Our Vision</h2>
+        <p class="text-gray-300 leading-relaxed">
+          To become a U.S. leader in responsible mineral sourcing and advanced metals processing,
+          driving a new era of sustainable industrial growth and technological independence.
+        </p>
+      </div>
+      <div class="bg-primary border border-bordergold rounded-2xl p-8">
+        <h2 class="text-xl font-semibold text-secondary mb-4">Our Focus</h2>
+        <ul class="space-y-3 text-gray-300 leading-relaxed list-disc list-inside">
+          <li>
+            <strong>Critical & Precious Metals:</strong> Gold, silver, platinum-group metals, and rare earth
+            elements essential to clean-energy and defense industries.
+          </li>
+          <li>
+            <strong>Domestic Development:</strong> Prioritizing American sites and operations to reduce
+            foreign dependency.
+          </li>
+          <li>
+            <strong>Technology Integration:</strong> Supporting innovation through collaborations and
+            advanced separation systems.
+          </li>
+          <li>
+            <strong>Compliance & Ethics:</strong> Upholding the highest standards under FinCEN, BSA, OFAC,
+            and EPA guidelines.
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="bg-primary border border-bordergold rounded-2xl p-8">
-      <h2 class="text-xl font-semibold text-secondary mb-4">Our Focus</h2>
-      <ul class="space-y-3 text-gray-300 leading-relaxed list-disc list-inside">
-        <li>
-          <strong>Critical & Precious Metals:</strong> Gold, silver, platinum-group metals, and rare earth
-          elements essential to clean-energy and defense industries.
-        </li>
-        <li>
-          <strong>Domestic Development:</strong> Prioritizing American sites and operations to reduce
-          foreign dependency.
-        </li>
-        <li>
-          <strong>Technology Integration:</strong> Supporting innovation through collaborations and
-          advanced separation systems.
-        </li>
-        <li>
-          <strong>Compliance & Ethics:</strong> Upholding the highest standards under FinCEN, BSA, OFAC,
-          and EPA guidelines.
-        </li>
-      </ul>
+
+    <!-- Mobile layout: icon + title + description -->
+    <div class="flex flex-col space-y-6 md:hidden">
+      <div class="flex items-start space-x-4 bg-primary border border-bordergold rounded-2xl p-4">
+        <i data-feather="eye" class="text-secondary w-6 h-6 mt-1"></i>
+        <div>
+          <h3 class="text-lg font-semibold text-secondary mb-1">Our Vision</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            To become a U.S. leader in responsible mineral sourcing and advanced metals processing,
+            driving a new era of sustainable industrial growth and technological independence.
+          </p>
+        </div>
+      </div>
+      <div class="flex items-start space-x-4 bg-primary border border-bordergold rounded-2xl p-4">
+        <i data-feather="target" class="text-secondary w-6 h-6 mt-1"></i>
+        <div>
+          <h3 class="text-lg font-semibold text-secondary mb-1">Our Focus</h3>
+          <ul class="text-gray-300 text-sm leading-relaxed list-disc list-inside space-y-1">
+            <li>
+              <strong>Critical & Precious Metals:</strong> Gold, silver, platinum-group metals, and rare earth
+              elements essential to clean-energy and defense industries.
+            </li>
+            <li>
+              <strong>Domestic Development:</strong> Prioritizing American sites and operations to reduce
+              foreign dependency.
+            </li>
+            <li>
+              <strong>Technology Integration:</strong> Supporting innovation through collaborations and
+              advanced separation systems.
+            </li>
+            <li>
+              <strong>Compliance & Ethics:</strong> Upholding the highest standards under FinCEN, BSA, OFAC,
+              and EPA guidelines.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 

@@ -274,6 +274,13 @@
       </div>
       <script>
         function openPDF(pdfUrl) {
+          // Mobile devices: open PDF in new tab
+          if (window.innerWidth < 768) {
+            window.open(pdfUrl, "_blank");
+            return;
+          }
+
+          // Desktop: open overlay viewer
           const overlay = document.getElementById('pdfOverlay');
           const frame = document.getElementById('pdfFrame');
           frame.src = pdfUrl;
@@ -282,7 +289,6 @@
           setTimeout(() => {
             overlay.classList.add('opacity-100');
           }, 10);
-          // Prevent background scroll
           document.body.style.overflow = 'hidden';
         }
         function closePDF() {

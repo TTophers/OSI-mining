@@ -274,23 +274,9 @@
       </div>
       <script>
         function openPDF(pdfUrl) {
-          // Mobile devices: prompt user to download or view PDF
+          // Mobile devices: open PDF in new tab
           if (window.innerWidth < 768) {
-            const choice = confirm("Would you like to DOWNLOAD this PDF?\n\nPress OK to Download\nPress Cancel to View");
-
-            if (choice) {
-              // DOWNLOAD PDF
-              const link = document.createElement("a");
-              link.href = pdfUrl;
-              link.download = "";
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            } else {
-              // VIEW PDF in new tab / fullscreen viewer
-              window.open(pdfUrl, "_blank");
-            }
-
+            window.open(pdfUrl, "_blank");
             return;
           }
 
